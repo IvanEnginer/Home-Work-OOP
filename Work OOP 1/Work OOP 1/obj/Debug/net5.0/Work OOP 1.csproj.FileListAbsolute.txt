@@ -1,0 +1,16 @@
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\bin\Debug\net5.0\Work OOP 1.exe
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\bin\Debug\net5.0\Work OOP 1.deps.json
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\bin\Debug\net5.0\Work OOP 1.runtimeconfig.json
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\bin\Debug\net5.0\Work OOP 1.runtimeconfig.dev.json
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\bin\Debug\net5.0\Work OOP 1.dll
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\bin\Debug\net5.0\ref\Work OOP 1.dll
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\bin\Debug\net5.0\Work OOP 1.pdb
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\obj\Debug\net5.0\Work OOP 1.csproj.AssemblyReference.cache
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\obj\Debug\net5.0\Work OOP 1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\obj\Debug\net5.0\Work OOP 1.AssemblyInfoInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\obj\Debug\net5.0\Work OOP 1.AssemblyInfo.cs
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\obj\Debug\net5.0\Work OOP 1.csproj.CoreCompileInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\obj\Debug\net5.0\Work OOP 1.dll
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\obj\Debug\net5.0\ref\Work OOP 1.dll
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\obj\Debug\net5.0\Work OOP 1.pdb
+D:\Home-Work-OOP\Work OOP 1\Work OOP 1\obj\Debug\net5.0\Work OOP 1.genruntimeconfig.cache
