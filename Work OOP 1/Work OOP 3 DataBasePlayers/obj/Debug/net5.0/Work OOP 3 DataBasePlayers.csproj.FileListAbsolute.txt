@@ -1,0 +1,16 @@
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\bin\Debug\net5.0\Work OOP 3 DataBasePlayers.exe
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\bin\Debug\net5.0\Work OOP 3 DataBasePlayers.deps.json
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\bin\Debug\net5.0\Work OOP 3 DataBasePlayers.runtimeconfig.json
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\bin\Debug\net5.0\Work OOP 3 DataBasePlayers.runtimeconfig.dev.json
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\bin\Debug\net5.0\Work OOP 3 DataBasePlayers.dll
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\bin\Debug\net5.0\ref\Work OOP 3 DataBasePlayers.dll
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\bin\Debug\net5.0\Work OOP 3 DataBasePlayers.pdb
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\obj\Debug\net5.0\Work OOP 3 DataBasePlayers.csproj.AssemblyReference.cache
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\obj\Debug\net5.0\Work OOP 3 DataBasePlayers.GeneratedMSBuildEditorConfig.editorconfig
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\obj\Debug\net5.0\Work OOP 3 DataBasePlayers.AssemblyInfoInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\obj\Debug\net5.0\Work OOP 3 DataBasePlayers.AssemblyInfo.cs
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\obj\Debug\net5.0\Work OOP 3 DataBasePlayers.csproj.CoreCompileInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\obj\Debug\net5.0\Work OOP 3 DataBasePlayers.dll
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\obj\Debug\net5.0\ref\Work OOP 3 DataBasePlayers.dll
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\obj\Debug\net5.0\Work OOP 3 DataBasePlayers.pdb
+D:\Home-Work-OOP\Work OOP 1\Work OOP 3 DataBasePlayers\obj\Debug\net5.0\Work OOP 3 DataBasePlayers.genruntimeconfig.cache
