@@ -13,10 +13,10 @@ namespace Work_OOP_1
 
         class Fighter
         {
-            public int Health;
-            public int Armore;
-            public int Damege;
-            public int Dexterity;
+            private int Health;
+            private int Armore;
+            private int Damege;
+            private int Dexterity;
 
             public Fighter(int health, int armore, int damege,int dexterity)
             {
