@@ -13,22 +13,22 @@ namespace Work_OOP_1
 
         class Fighter
         {
-            private int Health;
-            private int Armore;
-            private int Damege;
-            private int Dexterity;
+            private int _health;
+            private int _armore;
+            private int _damege;
+            private int _dexterity;
 
             public Fighter(int health, int armore, int damege,int dexterity)
             {
-                Health = health;
-                Armore = armore;
-                Damege = damege;
-                Dexterity = dexterity;
+                this._health = health;
+                this._armore = armore;
+                this._damege = damege;
+                this._dexterity = dexterity;
             }
 
             public void ShowStates()
             {
-                Console.WriteLine($" Health {Health} \n Armore {Armore} \n Damege {Damege} \n Dexterity {Dexterity}");
+                Console.WriteLine($" Health {_health} \n Armore {_armore} \n Damege {_damege} \n Dexterity {_dexterity}");
             }
         }
     }
