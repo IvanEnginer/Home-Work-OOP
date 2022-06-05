@@ -6,59 +6,30 @@ namespace Work_OOP_2
     {
         static void Main(string[] args)
         {
-            Player playerOne = new Player(10, 1);
+            Player playerOne = new Player(5, 5);
+            Draw drawPlayer = new Draw();
 
-            Draw drawPlayer = new Draw(playerOne.GetXPosition(), playerOne.GetYPosition());
-
-            drawPlayer.DrawPlayerPosition();
+            drawPlayer.DrawPlayerPosition(playerOne.XPosition, playerOne.YPosition);
         }
 
-    class Player
+        class Player
         {
-            private int _xPosition;
-            private int _yPosition;
+            public int XPosition { get; set; }
+            public int YPosition { get; set; }
 
-            public Player(int xPosition, int yPosition)
+            public Player(int xPosition = 0, int yPosition = 0)
             {
-                _xPosition = xPosition;
-                _yPosition = yPosition;
-            }
-
-            public void SetXYPosition(int xPosition,int yPosition)
-            {
-                xPosition = _xPosition;
-                yPosition = _yPosition;
-            }
-
-            public int GetXPosition()
-            {
-                return _xPosition;
-            }
-
-            public int GetYPosition()
-            {
-                return _yPosition;
+                XPosition = xPosition;
+                YPosition = yPosition;
             }
         }
 
-    class Draw
+        class Draw
         {
-            private int _xPosition;
-            private int _yPosition;
-
-            public Draw(int xPosition, int yPosition)
+            public void DrawPlayerPosition(int xPosition, int ypostion, char sign = '@')
             {
-                _xPosition = xPosition;
-                _yPosition = yPosition;
-            }
-
-            public void DrawPlayerPosition(int xPosition = 0, int yPosition = 0)
-            {
-                xPosition = _xPosition;
-                yPosition = _yPosition;
-
-                Console.SetCursorPosition(xPosition, yPosition);
-                Console.Write("@");
+                Console.SetCursorPosition(xPosition, ypostion);
+                Console.Write(sign);
             }
         }
     }

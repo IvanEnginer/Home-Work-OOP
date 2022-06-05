@@ -87,6 +87,11 @@ namespace Work_OOP_3_DataBasePlayers
             }
         }
 
+        class Player
+        {
+
+        }
+
         class DataBasePlaers
         {
             private int _id;
