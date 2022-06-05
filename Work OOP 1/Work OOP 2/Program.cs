@@ -9,7 +9,7 @@ namespace Work_OOP_2
             Player playerOne = new Player(5, 5, '@');
             RenderPlayer drawPlayer = new RenderPlayer();
 
-            drawPlayer.DrawPlayer(playerOne.XPosition, playerOne.YPosition, playerOne.Sign);
+            drawPlayer.Draw(playerOne.XPosition, playerOne.YPosition, playerOne.Sign);
         }
     }
 
@@ -29,10 +29,10 @@ namespace Work_OOP_2
 
     class RenderPlayer
     {
-        public void DrawPlayer(int xPositionPlayer, int yPostionPlayer, char signPlayer)
+        public void Draw(int xPosition, int yPostion, char sign)
         {
-            Console.SetCursorPosition(xPositionPlayer, yPostionPlayer);
-            Console.Write(signPlayer);
+            Console.SetCursorPosition(xPosition, yPostion);
+            Console.Write(sign);
         }
     }
 }
