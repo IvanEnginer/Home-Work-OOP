@@ -6,31 +6,33 @@ namespace Work_OOP_2
     {
         static void Main(string[] args)
         {
-            Player playerOne = new Player(5, 5);
-            Draw drawPlayer = new Draw();
+            Player playerOne = new Player(5, 5, '@');
+            RenderPlayer drawPlayer = new RenderPlayer();
 
-            drawPlayer.DrawPlayerPosition(playerOne.XPosition, playerOne.YPosition);
+            drawPlayer.DrawPlayer(playerOne.XPosition, playerOne.YPosition, playerOne.Sign);
         }
+    }
 
-        class Player
+    class Player
+    {
+        public int XPosition { get;private set; }
+        public int YPosition { get;private set; }
+        public char Sign { get; private set; }
+
+        public Player(int xPosition = 0, int yPosition = 0, char sign = '|')
         {
-            public int XPosition { get; set; }
-            public int YPosition { get; set; }
-
-            public Player(int xPosition = 0, int yPosition = 0)
-            {
-                XPosition = xPosition;
-                YPosition = yPosition;
-            }
+            XPosition = xPosition;
+            YPosition = yPosition;
+            Sign = sign;
         }
+    }
 
-        class Draw
+    class RenderPlayer
+    {
+        public void DrawPlayer(int xPositionPlayer, int yPostionPlayer, char signPlayer)
         {
-            public void DrawPlayerPosition(int xPosition, int ypostion, char sign = '@')
-            {
-                Console.SetCursorPosition(xPosition, ypostion);
-                Console.Write(sign);
-            }
+            Console.SetCursorPosition(xPositionPlayer, yPostionPlayer);
+            Console.Write(signPlayer);
         }
     }
 }

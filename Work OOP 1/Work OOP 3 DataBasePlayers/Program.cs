@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Work_OOP_3_DataBasePlayers
 {
@@ -6,6 +7,10 @@ namespace Work_OOP_3_DataBasePlayers
     {
         static void Main(string[] args)
         {
+            List<Player> playersList = new List<Player>();
+
+
+
             DataBasePlaers[] players = { };
 
             bool IsUseDataBese = true;
