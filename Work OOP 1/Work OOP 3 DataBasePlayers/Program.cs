@@ -1,145 +1,138 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Work_OOP_3_DataBasePlayers
+namespace ConsoleApp1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            List<Player> playersList = new List<Player>();
+            DataBasePlaeyrs dataBasePlaeyrs = new DataBasePlaeyrs();
 
+            bool dataBaseIsWork = true;
 
-
-            DataBasePlaers[] players = { };
-
-            bool IsUseDataBese = true;
-
-            while (IsUseDataBese)
+            while (dataBaseIsWork)
             {
-                Console.WriteLine("Comand: \nAdd\nDelite\nBaned\nUnbaned\nShow Base\nEsc");
+                Console.WriteLine("Enter Add, Show, Baned, Unbaned, Delete, Esc\n");
 
                 string comand = Console.ReadLine();
 
-                if(comand == "Add")
+                if (comand == "Add")
                 {
-                    DataBasePlaers[] temp = new DataBasePlaers[players.Length + 1];
-
-                    for (int i = 0; i < players.Length; i++)
-                    {
-                        temp[i] = players[i];
-                    }
-
-                    Console.WriteLine("Enter name");
-                    string name = Console.ReadLine();
-
-                    Console.WriteLine("Enter id");
-                    int id = Convert.ToInt32(Console.ReadLine());           
-
-                    temp[temp.Length - 1] = new DataBasePlaers(id, name);
-
-                    players = temp;
-
-                }else if(comand == "Delite")
-                {
-                    Console.WriteLine("Enter ID for delite");
-                    int id = Convert.ToInt32(Console.ReadLine());
-
-                    DataBasePlaers[] temp = new DataBasePlaers[players.Length - 1];
-
-                    for (int i = 0; i < players.Length; i++)
-                    {
-                        if(id != players[i].getID())
-                            temp[i] = players[i];
-                    }
-
-                    players = temp;
-
+                    dataBasePlaeyrs.Add();
                 }
-                else if(comand == "Baned")
+                else if (comand == "Show")
                 {
-                    Console.WriteLine("Enter id");
-                    int id = Convert.ToInt32(Console.ReadLine());
+                    dataBasePlaeyrs.ShowInfo();
+                }
+                else if (comand == "Baned")
+                {
+                    dataBasePlaeyrs.Baned();
+                }
+                else if (comand == "Unbaned")
+                {
+                    dataBasePlaeyrs.UnBaned();
+                }
+                else if (comand == "Delete")
+                {
+                    dataBasePlaeyrs.Delite();
+                }
+                else if (comand == "Esc")
+                {
+                    dataBaseIsWork = false;
+                }
+            }
+        }
+    }
 
-                    for (int i = 0; i < players.Length; i++)
-                    {
-                        if (id == players[i].getID())
-                            players[i].BanedUnbanedPlayer("Baned");
-                    }
-                }
-                else if(comand == "Unbaned")
-                {
-                    Console.WriteLine("Enter id");
-                    int id = Convert.ToInt32(Console.ReadLine());
+    class DataBasePlaeyrs
+    {
+        private List<Player> players = new List<Player>();
 
-                    for (int i = 0; i < players.Length; i++)
-                    {
-                        if (id == players[i].getID())
-                            players[i].BanedUnbanedPlayer("Unbaned");
-                    }
-                }
-                else if(comand == "Show Base")
+        public void Add()
+        {
+            Console.WriteLine("Enter Id");
+            int id = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter name");
+            string name = Console.ReadLine();
+            Console.WriteLine("Enter level");
+            int level = Convert.ToInt32(Console.ReadLine());
+
+            players.Add(new Player(id, name, level));
+        }
+
+        public void Delite()
+        {
+            Console.WriteLine("Enter ID");
+            int id = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < players.Count; i++)
+            {
+                if (players[i].Id == id)
                 {
-                    for(int i =0; i < players.Length; i++)
-                    {
-                        players[i].ShowInfo();
-                    }
-                }
-                else if(comand == "Esc")
-                {
-                    IsUseDataBese = false;
+                    players.RemoveAt(i);
                 }
             }
         }
 
-        class Player
+        public void Baned()
         {
-
+            Console.WriteLine("Enter ID");
+            int id = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < players.Count; i++)
+            {
+                if (players[i].Id == id)
+                {
+                    players[i].Ban();
+                }
+            }
         }
 
-        class DataBasePlaers
+        public void UnBaned()
         {
-            private int _id;
-            private string _name;
-            private int _level;
-            private bool _playerIsBaned;
-
-            public DataBasePlaers(int id, string name)
+            Console.WriteLine("Enter ID");
+            int id = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < players.Count; i++)
             {
-                _id = id;
-                _name = name;
-                _level = 1;
-                _playerIsBaned = false;
+                if (players[i].Id == id)
+                {
+                    players[i].Unban();
+                }
             }
+        }
 
-            public void AddPlayer(int id, string name)
+        public void ShowInfo()
+        {
+            for (int i = 0; i < players.Count; i++)
             {
-                _id = id;
-                _name = name;
+                Console.WriteLine($"ID {players[i].Id}\nName {players[i].Name}\nLevel {players[i].Level}\n" +
+                    $"Ban status {players[i].PlayerIsBaned}\n ");
             }
+        }
 
-            public void UpLevelPlayer(int level)
-            {
-                _level = level;
-            }
+    }
+    class Player
+    {
+        public int Id { get; private set; }
+        public string Name { get; private set; }
+        public int Level { get; private set; }
+        public bool PlayerIsBaned { get; private set; }
 
-            public void BanedUnbanedPlayer(string action)
-            {
-                if (action == "Baned")
-                    _playerIsBaned = true;
-                else if (action == "Unbaned")
-                    _playerIsBaned = false;
-            }
+        public Player(int id, string name, int level, bool playerIsBaned = false)
+        {
+            Id = id;
+            Name = name;
+            Level = level;
+            PlayerIsBaned = playerIsBaned;
+        }
 
-            public void ShowInfo()
-            {
-                Console.WriteLine($"ID {_id}\nName {_name}\nLevel {_level}\nBan status {_playerIsBaned}");
-            }
+        public void Ban()
+        {
+            PlayerIsBaned = true;
+        }
 
-            public int getID()
-            {
-                return _id;
-            }
+        public void Unban()
+        {
+            PlayerIsBaned = false;
         }
     }
 }
