@@ -1,0 +1,16 @@
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\bin\Debug\net5.0\Work OOP Library.exe
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\bin\Debug\net5.0\Work OOP Library.deps.json
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\bin\Debug\net5.0\Work OOP Library.runtimeconfig.json
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\bin\Debug\net5.0\Work OOP Library.runtimeconfig.dev.json
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\bin\Debug\net5.0\Work OOP Library.dll
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\bin\Debug\net5.0\ref\Work OOP Library.dll
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\bin\Debug\net5.0\Work OOP Library.pdb
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\obj\Debug\net5.0\Work OOP Library.GeneratedMSBuildEditorConfig.editorconfig
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\obj\Debug\net5.0\Work OOP Library.AssemblyInfoInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\obj\Debug\net5.0\Work OOP Library.AssemblyInfo.cs
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\obj\Debug\net5.0\Work OOP Library.csproj.CoreCompileInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\obj\Debug\net5.0\Work OOP Library.dll
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\obj\Debug\net5.0\ref\Work OOP Library.dll
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\obj\Debug\net5.0\Work OOP Library.pdb
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\obj\Debug\net5.0\Work OOP Library.genruntimeconfig.cache
+D:\Home-Work-OOP\Work OOP 1\Work OOP Library\obj\Debug\net5.0\Work OOP Library.csproj.AssemblyReference.cache

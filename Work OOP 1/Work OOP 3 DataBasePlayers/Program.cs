@@ -148,6 +148,11 @@ namespace ConsoleApp1
             }
         }
 
+        private bool TryGetPlayer(out Player players)
+        {
+
+        }
+
         public void Baned()
         {
             Console.WriteLine("Enter ID");
