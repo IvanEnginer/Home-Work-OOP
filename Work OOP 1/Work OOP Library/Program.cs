@@ -99,7 +99,7 @@ namespace Work_OOP_Library
             }
         }
 
-        private void printBookInfo(string name, string author, int date)
+        private void PrintBookInfo(string name, string author, int date)
         {
             Console.WriteLine($"Name: {name}\nAuthor: {author}\nDate {date}");
         }
@@ -108,7 +108,7 @@ namespace Work_OOP_Library
         {
             foreach(Book book in _books)
             {
-                printBookInfo(book.Name, book.Author, book.ReleaseDate);
+                PrintBookInfo(book.Name, book.Author, book.ReleaseDate);
             }
         }
 
@@ -121,7 +121,7 @@ namespace Work_OOP_Library
             {
                 if(date == book.ReleaseDate)
                 {
-                    printBookInfo(book.Name, book.Author, book.ReleaseDate);
+                    PrintBookInfo(book.Name, book.Author, book.ReleaseDate);
                 }
             }
         }
@@ -135,7 +135,7 @@ namespace Work_OOP_Library
             {
                 if (author == book.Author)
                 {
-                    printBookInfo(book.Name, book.Author, book.ReleaseDate);
+                    PrintBookInfo(book.Name, book.Author, book.ReleaseDate);
                 }
             }
         }
@@ -149,7 +149,7 @@ namespace Work_OOP_Library
             {
                 if (name == book.Name)
                 {
-                    printBookInfo(book.Name, book.Author, book.ReleaseDate);
+                    PrintBookInfo(book.Name, book.Author, book.ReleaseDate);
                 }
             }
         }
