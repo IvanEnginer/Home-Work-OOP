@@ -37,15 +37,15 @@ namespace Work_OOP_Library
 
     class Book
     {
-        public string name { get; private set; }
-        public string author { get; private set; }
-        public int releaseDate { get; private set; }
+        public string Name { get; private set; }
+        public string Author { get; private set; }
+        public int ReleaseDate { get; private set; }
 
         public Book(string name, string author, int releaseDate)
         {
-            this.name = name;
-            this.author = author;
-            this.releaseDate = releaseDate;
+            Name = name;
+            Author = author;
+            ReleaseDate = releaseDate;
         }
     }
 
@@ -103,7 +103,7 @@ namespace Work_OOP_Library
         {
             foreach(Book book in books)
             {
-                Console.WriteLine($"Name: {book.name}\nAuthor: {book.author}\nDate {book.releaseDate}");
+                Console.WriteLine($"Name: {book.Name}\nAuthor: {book.Author}\nDate {book.ReleaseDate}");
             }
         }
 
@@ -114,9 +114,9 @@ namespace Work_OOP_Library
 
             foreach(Book book in books)
             {
-                if(date == book.releaseDate)
+                if(date == book.ReleaseDate)
                 {
-                    Console.WriteLine($"Name: {book.name}\nAuthor: {book.author}\nDate {book.releaseDate}");
+                    Console.WriteLine($"Name: {book.Name}\nAuthor: {book.Author}\nDate {book.ReleaseDate}");
                 }
             }
         }
@@ -128,9 +128,9 @@ namespace Work_OOP_Library
 
             foreach (Book book in books)
             {
-                if (author == book.author)
+                if (author == book.Author)
                 {
-                    Console.WriteLine($"Name: {book.name}\nAuthor: {book.author}\nDate {book.releaseDate}");
+                    Console.WriteLine($"Name: {book.Name}\nAuthor: {book.Author}\nDate {book.ReleaseDate}");
                 }
             }
         }
@@ -142,9 +142,9 @@ namespace Work_OOP_Library
 
             foreach (Book book in books)
             {
-                if (name == book.name)
+                if (name == book.Name)
                 {
-                    Console.WriteLine($"Name: {book.name}\nAuthor: {book.author}\nDate {book.releaseDate}");
+                    Console.WriteLine($"Name: {book.Name}\nAuthor: {book.Author}\nDate {book.ReleaseDate}");
                 }
             }
         }
