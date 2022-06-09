@@ -51,7 +51,7 @@ namespace Work_OOP_Library
 
     class Library
     {
-        private List<Book> books = new List<Book>();
+        private List<Book> _books = new List<Book>();
 
         public void AddBook()
         {
@@ -66,14 +66,14 @@ namespace Work_OOP_Library
             Console.Write("Enter date release: ");
             releaseDate = GetInputDate();
 
-            books.Add(new Book(name, author, releaseDate));
+            _books.Add(new Book(name, author, releaseDate));
         }
 
         public void RemoveBook()
         {
             if(TryGetBook(out Book book))
             {
-                books.Remove(book);
+                _books.Remove(book);
             }
         }
 
@@ -99,11 +99,16 @@ namespace Work_OOP_Library
             }
         }
 
+        private void printBookInfo(string name, string author, int date)
+        {
+            Console.WriteLine($"Name: {name}\nAuthor: {author}\nDate {date}");
+        }
+
         private void ShowAllBooks()
         {
-            foreach(Book book in books)
+            foreach(Book book in _books)
             {
-                Console.WriteLine($"Name: {book.Name}\nAuthor: {book.Author}\nDate {book.ReleaseDate}");
+                printBookInfo(book.Name, book.Author, book.ReleaseDate);
             }
         }
 
@@ -112,11 +117,11 @@ namespace Work_OOP_Library
             Console.Write("Enter date: ");
             int date = GetInputDate();
 
-            foreach(Book book in books)
+            foreach(Book book in _books)
             {
                 if(date == book.ReleaseDate)
                 {
-                    Console.WriteLine($"Name: {book.Name}\nAuthor: {book.Author}\nDate {book.ReleaseDate}");
+                    printBookInfo(book.Name, book.Author, book.ReleaseDate);
                 }
             }
         }
@@ -126,11 +131,11 @@ namespace Work_OOP_Library
             Console.Write("Enter author: ");
             string author = Console.ReadLine();
 
-            foreach (Book book in books)
+            foreach (Book book in _books)
             {
                 if (author == book.Author)
                 {
-                    Console.WriteLine($"Name: {book.Name}\nAuthor: {book.Author}\nDate {book.ReleaseDate}");
+                    printBookInfo(book.Name, book.Author, book.ReleaseDate);
                 }
             }
         }
@@ -140,11 +145,11 @@ namespace Work_OOP_Library
             Console.Write("Enter name: ");
             string name = Console.ReadLine();
 
-            foreach (Book book in books)
+            foreach (Book book in _books)
             {
                 if (name == book.Name)
                 {
-                    Console.WriteLine($"Name: {book.Name}\nAuthor: {book.Author}\nDate {book.ReleaseDate}");
+                    printBookInfo(book.Name, book.Author, book.ReleaseDate);
                 }
             }
         }
@@ -156,7 +161,7 @@ namespace Work_OOP_Library
 
             if(isNumber)
             {
-                book = books[inputNumber - 1];
+                book = _books[inputNumber - 1];
                 return true;
             }
             else
