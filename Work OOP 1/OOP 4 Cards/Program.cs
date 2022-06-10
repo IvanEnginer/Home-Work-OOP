@@ -27,7 +27,7 @@ namespace OOP_4_Cards
                         PutMooreCards(player, deck);
                         break;
                     case "3":
-                        player.ShowCard();
+                        player.ShowCards();
                         break;
                     case "4":
                         isWork = false;
@@ -79,7 +79,7 @@ namespace OOP_4_Cards
             new Card("A", 1),new Card("B", 2), new Card("C", 3), 
             new Card("D", 4), new Card("I", 5), new Card("F", 6)
         };
-    private Random random = new Random();
+        private Random _random = new Random();
 
         public Deck(){}
 
@@ -106,7 +106,7 @@ namespace OOP_4_Cards
 
             if (_cards.Count > maximumNumberCard)
             {
-                numberCard = random.Next(minimalNumberCard, maximumNumberCard);
+                numberCard = _random.Next(minimalNumberCard, maximumNumberCard);
                 maximumNumberCard--;
             }
 
@@ -123,11 +123,11 @@ namespace OOP_4_Cards
             if(deck.TryGetCard(out Card card))
             {
                 _onHand.Add(card);
-                ShowCard();
+                ShowCards();
             }
         }
 
-        public void ShowCard()
+        public void ShowCards()
         {
             for(int i = 0; i < _onHand.Count; i++)
             {
