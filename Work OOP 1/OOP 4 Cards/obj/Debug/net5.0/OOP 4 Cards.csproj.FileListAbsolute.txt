@@ -1,0 +1,16 @@
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\bin\Debug\net5.0\OOP 4 Cards.exe
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\bin\Debug\net5.0\OOP 4 Cards.deps.json
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\bin\Debug\net5.0\OOP 4 Cards.runtimeconfig.json
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\bin\Debug\net5.0\OOP 4 Cards.runtimeconfig.dev.json
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\bin\Debug\net5.0\OOP 4 Cards.dll
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\bin\Debug\net5.0\ref\OOP 4 Cards.dll
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\bin\Debug\net5.0\OOP 4 Cards.pdb
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\obj\Debug\net5.0\OOP 4 Cards.GeneratedMSBuildEditorConfig.editorconfig
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\obj\Debug\net5.0\OOP 4 Cards.AssemblyInfoInputs.cache
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\obj\Debug\net5.0\OOP 4 Cards.AssemblyInfo.cs
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\obj\Debug\net5.0\OOP 4 Cards.csproj.CoreCompileInputs.cache
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\obj\Debug\net5.0\OOP 4 Cards.dll
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\obj\Debug\net5.0\ref\OOP 4 Cards.dll
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\obj\Debug\net5.0\OOP 4 Cards.pdb
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\obj\Debug\net5.0\OOP 4 Cards.genruntimeconfig.cache
+D:\Home-Work-OOP\Work OOP 1\OOP 4 Cards\obj\Debug\net5.0\OOP 4 Cards.csproj.AssemblyReference.cache
