@@ -11,19 +11,6 @@ namespace ConsoleApp6
             Seller sellerOne = new Seller();
 
             string comand;
-
-            //           sellerOne.Show();
-
-            //           Console.WriteLine("-------");
-
-            //           string name = Console.ReadLine();
-
-            ////           plaerOne.GetItem(name, sellerOne);
-
-            //           plaerOne.ShowItems();
-
-
-
             bool isWork = true;
 
             while (isWork)
