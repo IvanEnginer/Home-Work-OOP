@@ -78,28 +78,29 @@ namespace ConsoleApp6
 
     class Person
     {
-        protected List<Item> _items = new List<Item>();
+        protected List<Item> items = new List<Item>();
     }
 
     class Seller : Person
     {
         public Seller()
         {
-            _items.Add(new Item("apple", 2));
-            _items.Add(new Item("sword", 50));
-            _items.Add(new Item("mace", 100));
+            items.Add(new Item("apple", 2));
+            items.Add(new Item("sword", 50));
+            items.Add(new Item("mace", 100));
         }
 
-        public bool TryGetItem(string name, int money, out Item item)
+        public bool TryGetItem(string name, out Item item, int money)
         {
-            for (int i = 0; i < _items.Count; i++)
+            for (int i = 0; i < items.Count; i++)
             {
-                if (_items[i].Name == name)
+                if (items[i].Name == name)
                 {
-                    if (money > _items[i].Price)
+                    if (money > items[i].Price)
                     {
-                        item = _items[i];
-                        _items.Remove(item);
+
+                        item = items[i];
+                        items.Remove(item);
                         return true;
                     }
                     else
@@ -115,8 +116,8 @@ namespace ConsoleApp6
 
         public void Show()
         {
-            for (int i = 0; i < _items.Count; i++)
-                Console.WriteLine(_items[i].Name + " price: " + _items[i].Price);
+            for (int i = 0; i < items.Count; i++)
+                Console.WriteLine(items[i].Name + " price: " + items[i].Price);
         }
     }
 
@@ -131,9 +132,10 @@ namespace ConsoleApp6
 
         public void AddItemInBag(string name, Seller seller)
         {
-            if (seller.TryGetItem(name, Money, out Item item))
+            if (seller.TryGetItem(name, out Item item, Money))
             {
-                _items.Add(item);
+                items.Add(item);
+                Money -= item.Price;
             }
             else
             {
@@ -143,9 +145,9 @@ namespace ConsoleApp6
 
         public void ShowItems()
         {
-            for (int i = 0; i < _items.Count; i++)
+            for (int i = 0; i < items.Count; i++)
             {
-                Console.WriteLine($"In Player bag {_items[i].Name}");
+                Console.WriteLine($"In Player bag {items[i].Name}");
             }
         }
     }
