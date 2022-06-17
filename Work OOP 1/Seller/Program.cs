@@ -58,7 +58,7 @@ namespace ConsoleApp6
             {
                 Console.Write("Enter name item: ");
                 string name = Console.ReadLine();
-                player.GetItem(name, seller);
+                player.AddItemInBag(name, seller);
                 Console.Clear();
             }
         }
@@ -76,14 +76,19 @@ namespace ConsoleApp6
         }
     }
 
-    class Seller
+    class Person
     {
-        private List<Item> _items = new List<Item>()
-        {
-            new Item("apple", 2), new Item("sword", 50), new Item("mace", 100)
-        };
+        protected List<Item> _items = new List<Item>();
+    }
 
-        public Seller() { }
+    class Seller : Person
+    {
+        public Seller()
+        {
+            _items.Add(new Item("apple", 2));
+            _items.Add(new Item("sword", 50));
+            _items.Add(new Item("mace", 100));
+        }
 
         public bool TryGetItem(string name, int money, out Item item)
         {
@@ -115,10 +120,8 @@ namespace ConsoleApp6
         }
     }
 
-    class Player
+    class Player : Person
     {
-        private List<Item> _items = new List<Item>();
-
         public int Money { get; private set; }
 
         public Player(int money)
@@ -126,7 +129,7 @@ namespace ConsoleApp6
             Money = money;
         }
 
-        public void GetItem(string name, Seller seller)
+        public void AddItemInBag(string name, Seller seller)
         {
             if (seller.TryGetItem(name, Money, out Item item))
             {
