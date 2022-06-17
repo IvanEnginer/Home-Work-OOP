@@ -1,0 +1,16 @@
+D:\Home-Work-OOP\Work OOP 1\shop\bin\Debug\net5.0\shop.exe
+D:\Home-Work-OOP\Work OOP 1\shop\bin\Debug\net5.0\shop.deps.json
+D:\Home-Work-OOP\Work OOP 1\shop\bin\Debug\net5.0\shop.runtimeconfig.json
+D:\Home-Work-OOP\Work OOP 1\shop\bin\Debug\net5.0\shop.runtimeconfig.dev.json
+D:\Home-Work-OOP\Work OOP 1\shop\bin\Debug\net5.0\shop.dll
+D:\Home-Work-OOP\Work OOP 1\shop\bin\Debug\net5.0\ref\shop.dll
+D:\Home-Work-OOP\Work OOP 1\shop\bin\Debug\net5.0\shop.pdb
+D:\Home-Work-OOP\Work OOP 1\shop\obj\Debug\net5.0\shop.GeneratedMSBuildEditorConfig.editorconfig
+D:\Home-Work-OOP\Work OOP 1\shop\obj\Debug\net5.0\shop.AssemblyInfoInputs.cache
+D:\Home-Work-OOP\Work OOP 1\shop\obj\Debug\net5.0\shop.AssemblyInfo.cs
+D:\Home-Work-OOP\Work OOP 1\shop\obj\Debug\net5.0\shop.csproj.CoreCompileInputs.cache
+D:\Home-Work-OOP\Work OOP 1\shop\obj\Debug\net5.0\shop.dll
+D:\Home-Work-OOP\Work OOP 1\shop\obj\Debug\net5.0\ref\shop.dll
+D:\Home-Work-OOP\Work OOP 1\shop\obj\Debug\net5.0\shop.pdb
+D:\Home-Work-OOP\Work OOP 1\shop\obj\Debug\net5.0\shop.genruntimeconfig.cache
+D:\Home-Work-OOP\Work OOP 1\shop\obj\Debug\net5.0\shop.csproj.AssemblyReference.cache

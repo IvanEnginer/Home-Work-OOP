@@ -1,0 +1,16 @@
+D:\Home-Work-OOP\Work OOP 1\Seller\bin\Debug\net5.0\Seller.exe
+D:\Home-Work-OOP\Work OOP 1\Seller\bin\Debug\net5.0\Seller.deps.json
+D:\Home-Work-OOP\Work OOP 1\Seller\bin\Debug\net5.0\Seller.runtimeconfig.json
+D:\Home-Work-OOP\Work OOP 1\Seller\bin\Debug\net5.0\Seller.runtimeconfig.dev.json
+D:\Home-Work-OOP\Work OOP 1\Seller\bin\Debug\net5.0\Seller.dll
+D:\Home-Work-OOP\Work OOP 1\Seller\bin\Debug\net5.0\ref\Seller.dll
+D:\Home-Work-OOP\Work OOP 1\Seller\bin\Debug\net5.0\Seller.pdb
+D:\Home-Work-OOP\Work OOP 1\Seller\obj\Debug\net5.0\Seller.csproj.AssemblyReference.cache
+D:\Home-Work-OOP\Work OOP 1\Seller\obj\Debug\net5.0\Seller.GeneratedMSBuildEditorConfig.editorconfig
+D:\Home-Work-OOP\Work OOP 1\Seller\obj\Debug\net5.0\Seller.AssemblyInfoInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Seller\obj\Debug\net5.0\Seller.AssemblyInfo.cs
+D:\Home-Work-OOP\Work OOP 1\Seller\obj\Debug\net5.0\Seller.csproj.CoreCompileInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Seller\obj\Debug\net5.0\Seller.dll
+D:\Home-Work-OOP\Work OOP 1\Seller\obj\Debug\net5.0\ref\Seller.dll
+D:\Home-Work-OOP\Work OOP 1\Seller\obj\Debug\net5.0\Seller.pdb
+D:\Home-Work-OOP\Work OOP 1\Seller\obj\Debug\net5.0\Seller.genruntimeconfig.cache
