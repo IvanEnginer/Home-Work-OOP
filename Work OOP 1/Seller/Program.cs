@@ -78,29 +78,29 @@ namespace ConsoleApp6
 
     class Person
     {
-        protected List<Item> items = new List<Item>();
+        protected List<Item> Items = new List<Item>();
     }
 
     class Seller : Person
     {
         public Seller()
         {
-            items.Add(new Item("apple", 2));
-            items.Add(new Item("sword", 50));
-            items.Add(new Item("mace", 100));
+            Items.Add(new Item("apple", 2));
+            Items.Add(new Item("sword", 50));
+            Items.Add(new Item("mace", 100));
         }
 
         public bool TryGetItem(string name, out Item item, int money)
         {
-            for (int i = 0; i < items.Count; i++)
+            for (int i = 0; i < Items.Count; i++)
             {
-                if (items[i].Name == name)
+                if (Items[i].Name == name)
                 {
-                    if (money > items[i].Price)
+                    if (money > Items[i].Price)
                     {
 
-                        item = items[i];
-                        items.Remove(item);
+                        item = Items[i];
+                        Items.Remove(item);
                         return true;
                     }
                     else
@@ -116,8 +116,8 @@ namespace ConsoleApp6
 
         public void Show()
         {
-            for (int i = 0; i < items.Count; i++)
-                Console.WriteLine(items[i].Name + " price: " + items[i].Price);
+            for (int i = 0; i < Items.Count; i++)
+                Console.WriteLine(Items[i].Name + " price: " + Items[i].Price);
         }
     }
 
@@ -134,7 +134,7 @@ namespace ConsoleApp6
         {
             if (seller.TryGetItem(name, out Item item, Money))
             {
-                items.Add(item);
+                Items.Add(item);
                 Money -= item.Price;
             }
             else
@@ -145,9 +145,9 @@ namespace ConsoleApp6
 
         public void ShowItems()
         {
-            for (int i = 0; i < items.Count; i++)
+            for (int i = 0; i < Items.Count; i++)
             {
-                Console.WriteLine($"In Player bag {items[i].Name}");
+                Console.WriteLine($"In Player bag {Items[i].Name}");
             }
         }
     }
