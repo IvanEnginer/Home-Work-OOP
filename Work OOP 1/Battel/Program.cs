@@ -160,7 +160,7 @@ namespace Battel
         protected override void UsePower()
         {
             Random random = new Random();
-            int rangeMaximumNumbers = 2;
+             int rangeMaximumNumbers = 2;
             int chance = random.Next(rangeMaximumNumbers);
 
             if (chance == 1)
@@ -178,13 +178,14 @@ namespace Battel
 
     class KarateBoy : Fighter
     {
+        Random random = new Random();
+        private int _rangeMaximumNumbers = 6;
+
         public KarateBoy(string name, int health, int damage) : base(name, health, damage) { }
 
         protected override void UsePower()
-        {
-            Random random = new Random();
-            int rangeMaximumNumbers = 6;
-            int multiplication = random.Next(rangeMaximumNumbers);
+        {          
+            int multiplication = random.Next(_rangeMaximumNumbers);
 
             Console.WriteLine("A series of blows ");
             Damage *= multiplication;
@@ -194,13 +195,17 @@ namespace Battel
 
     class MMA : Fighter
     {
+        Random random = new Random();
+        private int _rangeMaximumNumbers = 3;
+        private int _maximumMultiplication = 3;
+        private int _damageBoost = 20;
+        private int _multiplication = 2;
+
         public MMA(string name, int health, int damage) : base(name, health, damage) { }
 
         protected override void UsePower()
         {
-            Random random = new Random();
-            int rangeMaximumNumbers = 3;
-            int chance = random.Next(rangeMaximumNumbers);
+            int chance = random.Next(_rangeMaximumNumbers);
 
             switch (chance)
             {
@@ -217,58 +222,53 @@ namespace Battel
         }
 
         private void KickTypeOne()
-        {
-            Random random = new Random();
-            int maximumMultiplication = 3;
-            int multiplication = random.Next(maximumMultiplication);
-
+        {            
+            int multiplication = random.Next(_maximumMultiplication);
             Console.WriteLine("Boost multiplication ");
+
             Damage *= multiplication;
         }
 
         private void KickTypeTwo()
         {
-            int damageBoost = 20;
-
             Console.WriteLine("Boost damage ");
-            Damage += damageBoost;
+            Damage += _damageBoost;
         }
 
         private void KickTypeFree()
         {
-            int damageBoost = 5;
-            int multiplication = 2;
+            _damageBoost = 5;
 
             Console.WriteLine("Boost damage and multiplication damage ");
-            Damage += damageBoost;
-            Damage *= multiplication;
+            Damage += _damageBoost;
+            Damage *= _multiplication;
         }
     }
 
     class Jiudgidcu : Fighter
     {
+        private int _maximumBoost = 70;
+
         public Jiudgidcu(string name, int health, int damage) : base(name, health, damage) { }
 
         Random random = new Random();
-        int maximumBoost = 70;
 
         protected override void UsePower()
         {
             Console.WriteLine("Boost damage random power ");
-            Damage += random.Next(maximumBoost);
+            Damage += random.Next(_maximumBoost);
         }
     }
 
     class Aicido : Fighter
     {
+        private int _boostHelth = 30;
         public Aicido(string name, int health, int damage) : base(name, health, damage) { }
-
-        Random random = new Random();
 
         protected override void UsePower()
         {
             Console.WriteLine("Boost health ");
-            Health += 30;
+            Health += _boostHelth;
         }
     }
 }
