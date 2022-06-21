@@ -1,0 +1,16 @@
+D:\Home-Work-OOP\Work OOP 1\Battel\bin\Debug\net5.0\Battel.exe
+D:\Home-Work-OOP\Work OOP 1\Battel\bin\Debug\net5.0\Battel.deps.json
+D:\Home-Work-OOP\Work OOP 1\Battel\bin\Debug\net5.0\Battel.runtimeconfig.json
+D:\Home-Work-OOP\Work OOP 1\Battel\bin\Debug\net5.0\Battel.runtimeconfig.dev.json
+D:\Home-Work-OOP\Work OOP 1\Battel\bin\Debug\net5.0\Battel.dll
+D:\Home-Work-OOP\Work OOP 1\Battel\bin\Debug\net5.0\ref\Battel.dll
+D:\Home-Work-OOP\Work OOP 1\Battel\bin\Debug\net5.0\Battel.pdb
+D:\Home-Work-OOP\Work OOP 1\Battel\obj\Debug\net5.0\Battel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Home-Work-OOP\Work OOP 1\Battel\obj\Debug\net5.0\Battel.AssemblyInfoInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Battel\obj\Debug\net5.0\Battel.AssemblyInfo.cs
+D:\Home-Work-OOP\Work OOP 1\Battel\obj\Debug\net5.0\Battel.csproj.CoreCompileInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Battel\obj\Debug\net5.0\Battel.dll
+D:\Home-Work-OOP\Work OOP 1\Battel\obj\Debug\net5.0\ref\Battel.dll
+D:\Home-Work-OOP\Work OOP 1\Battel\obj\Debug\net5.0\Battel.pdb
+D:\Home-Work-OOP\Work OOP 1\Battel\obj\Debug\net5.0\Battel.genruntimeconfig.cache
+D:\Home-Work-OOP\Work OOP 1\Battel\obj\Debug\net5.0\Battel.csproj.AssemblyReference.cache
