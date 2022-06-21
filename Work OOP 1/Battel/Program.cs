@@ -27,6 +27,8 @@ namespace Battel
         public int Health { get; protected set; }
         public int Damage { get; protected set; }
 
+        protected Random random = new Random();
+
         public Fighter(string name, int heaith, int damage)
         {
             Name = name;
@@ -48,7 +50,6 @@ namespace Battel
 
         public void UseSpecialAttack()
         {
-            Random random = new Random();
             int rangeMaximumNumbers = 100;
             int chance = random.Next(rangeMaximumNumbers);
             int chanceUsePower = 60;
@@ -159,8 +160,7 @@ namespace Battel
 
         protected override void UsePower()
         {
-            Random random = new Random();
-             int rangeMaximumNumbers = 2;
+            int rangeMaximumNumbers = 2;
             int chance = random.Next(rangeMaximumNumbers);
 
             if (chance == 1)
@@ -177,8 +177,7 @@ namespace Battel
     }
 
     class KarateBoy : Fighter
-    {
-        Random random = new Random();
+    {     
         private int _rangeMaximumNumbers = 6;
 
         public KarateBoy(string name, int health, int damage) : base(name, health, damage) { }
@@ -195,7 +194,6 @@ namespace Battel
 
     class MMA : Fighter
     {
-        Random random = new Random();
         private int _rangeMaximumNumbers = 3;
         private int _maximumMultiplication = 3;
         private int _damageBoost = 20;
@@ -250,8 +248,6 @@ namespace Battel
         private int _maximumBoost = 70;
 
         public Jiudgidcu(string name, int health, int damage) : base(name, health, damage) { }
-
-        Random random = new Random();
 
         protected override void UsePower()
         {
