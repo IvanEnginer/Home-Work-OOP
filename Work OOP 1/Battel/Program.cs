@@ -27,7 +27,7 @@ namespace Battel
         public int Health { get; protected set; }
         public int Damage { get; protected set; }
 
-        protected Random random = new Random();
+        protected Random Random = new Random();
 
         public Fighter(string name, int heaith, int damage)
         {
@@ -51,7 +51,7 @@ namespace Battel
         public void UseSpecialAttack()
         {
             int rangeMaximumNumbers = 100;
-            int chance = random.Next(rangeMaximumNumbers);
+            int chance = Random.Next(rangeMaximumNumbers);
             int chanceUsePower = 60;
 
             if (chance < chanceUsePower)
@@ -161,7 +161,7 @@ namespace Battel
         protected override void UsePower()
         {
             int rangeMaximumNumbers = 2;
-            int chance = random.Next(rangeMaximumNumbers);
+            int chance = Random.Next(rangeMaximumNumbers);
 
             if (chance == 1)
             {
@@ -184,7 +184,7 @@ namespace Battel
 
         protected override void UsePower()
         {          
-            int multiplication = random.Next(_rangeMaximumNumbers);
+            int multiplication = Random.Next(_rangeMaximumNumbers);
 
             Console.WriteLine("A series of blows ");
             Damage *= multiplication;
@@ -203,7 +203,7 @@ namespace Battel
 
         protected override void UsePower()
         {
-            int chance = random.Next(_rangeMaximumNumbers);
+            int chance = Random.Next(_rangeMaximumNumbers);
 
             switch (chance)
             {
@@ -221,7 +221,7 @@ namespace Battel
 
         private void KickTypeOne()
         {            
-            int multiplication = random.Next(_maximumMultiplication);
+            int multiplication = Random.Next(_maximumMultiplication);
             Console.WriteLine("Boost multiplication ");
 
             Damage *= multiplication;
@@ -252,7 +252,7 @@ namespace Battel
         protected override void UsePower()
         {
             Console.WriteLine("Boost damage random power ");
-            Damage += random.Next(_maximumBoost);
+            Damage += Random.Next(_maximumBoost);
         }
     }
 
