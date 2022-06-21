@@ -51,7 +51,7 @@ namespace Battel
             Random random = new Random();
             int rangeMaximumNumbers = 100;
             int chance = random.Next(rangeMaximumNumbers);
-            int chanceUsePower = 20;
+            int chanceUsePower = 60;
 
             if (chance < chanceUsePower)
             {
@@ -78,11 +78,11 @@ namespace Battel
 
         public Field()
         {
-            _fighters.Add(new Boxer("Boxer One", 400, 30));
-            _fighters.Add(new Boxer("Boxer Two", 350, 40));
+            _fighters.Add(new Boxer("Boxer chempion", 400, 30));
+            _fighters.Add(new Jiudgidcu("Jiudgidcu master", 350, 40));
             _fighters.Add(new KarateBoy("Karate Boy", 300, 25));
-            _fighters.Add(new KarateBoy("Karate Man", 250, 35));
-            _fighters.Add(new MMAFighter("Fighter", 150, 50));
+            _fighters.Add(new Aicido("Aicido Man", 250, 35));
+            _fighters.Add(new MMA("Fighter MMA", 150, 50));
         }
 
         public bool ShowBattelResult()
@@ -134,18 +134,18 @@ namespace Battel
             {
                 fighter = _fighters[inputID - 1];
                 _fighters.Remove(fighter);
-                Console.WriteLine("Socefull");
+                Console.WriteLine("Socefull ");
             }
         }
 
         private void Show()
         {
-            Console.WriteLine("list fighters");
+            Console.WriteLine("list fighters ");
 
             for (int i = 0; i < _fighters.Count; i++)
             {
-                Console.WriteLine((i + 1) + ". " + "Name: " + _fighters[i].Name +
-                   "Health: " + _fighters[i].Health + "Damage: " + _fighters[i].Damage);              
+                Console.WriteLine((i + 1) + ". " + " Name: " + _fighters[i].Name +
+                   " Health: " + _fighters[i].Health + " Damage: " + _fighters[i].Damage);              
             }
         }
     }
@@ -165,12 +165,12 @@ namespace Battel
 
             if (chance == 1)
             {
-                Console.WriteLine("Huck");
+                Console.WriteLine("Huck ");
                 Damage += _damageBoostTypeOne;
             }
             else
             {
-                Console.WriteLine("Right");
+                Console.WriteLine("Right ");
                 Damage += _damageBoostTypeTwo;
             }
         }
@@ -186,14 +186,15 @@ namespace Battel
             int rangeMaximumNumbers = 6;
             int multiplication = random.Next(rangeMaximumNumbers);
 
+            Console.WriteLine("A series of blows ");
             Damage *= multiplication;
         }
     }
 
 
-    class MMAFighter : Fighter
+    class MMA : Fighter
     {
-        public MMAFighter(string name, int health, int damage) : base(name, health, damage) { }
+        public MMA(string name, int health, int damage) : base(name, health, damage) { }
 
         protected override void UsePower()
         {
@@ -204,38 +205,70 @@ namespace Battel
             switch (chance)
             {
                 case 0:
-                    KickTyoeOne();
+                    KickTypeOne();
                     break;
                 case 1:
-                    KickTyoeTwo();
+                    KickTypeTwo();
                     break;
                 case 2:
-                    KickTyoeFree();
+                    KickTypeFree();
                     break;
             }
         }
 
-        private void KickTyoeOne()
+        private void KickTypeOne()
         {
             Random random = new Random();
             int maximumMultiplication = 3;
             int multiplication = random.Next(maximumMultiplication);
 
+            Console.WriteLine("Boost multiplication ");
             Damage *= multiplication;
         }
 
-        private void KickTyoeTwo()
+        private void KickTypeTwo()
         {
             int damageBoost = 20;
+
+            Console.WriteLine("Boost damage ");
             Damage += damageBoost;
         }
 
-        private void KickTyoeFree()
+        private void KickTypeFree()
         {
             int damageBoost = 5;
             int multiplication = 2;
+
+            Console.WriteLine("Boost damage and multiplication damage ");
             Damage += damageBoost;
             Damage *= multiplication;
+        }
+    }
+
+    class Jiudgidcu : Fighter
+    {
+        public Jiudgidcu(string name, int health, int damage) : base(name, health, damage) { }
+
+        Random random = new Random();
+        int maximumBoost = 70;
+
+        protected override void UsePower()
+        {
+            Console.WriteLine("Boost damage random power ");
+            Damage += random.Next(maximumBoost);
+        }
+    }
+
+    class Aicido : Fighter
+    {
+        public Aicido(string name, int health, int damage) : base(name, health, damage) { }
+
+        Random random = new Random();
+
+        protected override void UsePower()
+        {
+            Console.WriteLine("Boost health ");
+            Health += 30;
         }
     }
 }
