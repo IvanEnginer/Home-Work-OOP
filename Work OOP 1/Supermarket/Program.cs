@@ -8,9 +8,11 @@ namespace Supermarket
         static void Main(string[] args)
         {
             Stroge strogeNarket = new Stroge();
+
             Visiter visiterOne = new Visiter(100);
             Visiter visiterTwo = new Visiter(50);
             Visiter visiterFree = new Visiter(20);
+
             Maneger maneger = new Maneger();
 
             visiterOne.AddItems(strogeNarket);
@@ -28,7 +30,6 @@ namespace Supermarket
     class Maneger
     {
         private Queue<Visiter> _visiters = new Queue<Visiter>();
-        private List<Item> _items = new List<Item>();
 
         public void EnqueueToQueue(Visiter visiter)
         {
@@ -41,8 +42,10 @@ namespace Supermarket
             {
                 GetVisiterChek(_visiters.Peek());
                 _visiters.Dequeue();
-                Console.WriteLine("Visiter Dequrue");
+                Console.WriteLine("Visiter Dequrue\n");
             }
+
+            Console.WriteLine("\nQueue end");
         }
 
         public bool GetVisiterChek(Visiter visiter)
@@ -78,7 +81,7 @@ namespace Supermarket
         {
             for (int i = 0; i < visiter.GetCountItems(); i++)
             {
-                if (visiter.items[i].Price <= visiter.Money)
+                if (visiter.GetPriceItems(i) <= visiter.Money)
                 {
                     return true;
                 }
@@ -94,7 +97,7 @@ namespace Supermarket
 
             for (int i = 0; i < count; i++)
             {
-                total += visiter.items[i].Price;
+                total += visiter.GetPriceItems(i);
             }
             return total;
         }
@@ -111,10 +114,10 @@ namespace Supermarket
         new Item("radish", 15), new Item("carrots", 5), new Item("apricot", 20), 
         new Item("watermelon", 50)};
 
+        private Random random = new Random();
+
         public void GetItems(ref List<Item> items)
         {
-            Random random = new Random();
-
             items.Add(new Item(_storege[random.Next(0, _storege.Count)].Name, _storege[random.Next(0, _storege.Count)].Price));
         }
     }
@@ -123,9 +126,9 @@ namespace Supermarket
     {
         public int Money { get; private set; }
 
-        public List<Item> items = new List<Item>();
+        private List<Item> _items = new List<Item>();
 
-        Random random = new Random();
+        private Random random = new Random();
 
         public Visiter(int money)
         {
@@ -137,21 +140,26 @@ namespace Supermarket
             Money -= chek;
         }
 
+        public int GetPriceItems(int number)
+        {
+            return _items[number].Price;
+        }
+
         public void AddItems(Stroge stroge)
         {
             int basketSize = 5;
 
             for (int i = 0; i < random.Next(1, basketSize); i++)
             {
-                stroge.GetItems(ref items);
+                stroge.GetItems(ref _items);
             }
         }
 
         public bool GetItem()
         {
-            if (items.Count > 0)
+            if (_items.Count > 0)
             {
-                items.RemoveAt(random.Next(0, items.Count));
+                _items.RemoveAt(random.Next(0, _items.Count));
                 return true;
             }
                 else 
@@ -162,15 +170,7 @@ namespace Supermarket
 
         public int GetCountItems()
         {
-            return items.Count;
-        }
-
-        public void Show()
-        {
-            foreach (var it in items)
-            {
-                Console.WriteLine($"Name {it.Name}, Price {it.Price}");
-            }
+            return _items.Count;
         }
 
         public void ShowManey()
