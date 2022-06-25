@@ -47,33 +47,33 @@ namespace ConsoleApp1
 
     class Player
     {
-        public int id { get; private set; }
-        public string name { get; private set; }
-        public int level { get; private set; }
-        public bool isBaned { get; private set; }
+        public int Id { get; private set; }
+        public string Name { get; private set; }
+        public int Level { get; private set; }
+        public bool IsBaned { get; private set; }
 
         public Player(int id, string name, int level, bool isBaned = false)
         {
-            this.id = id;
-            this.name = name;
-            this.level = level;
-            this.isBaned = isBaned;
+            Id = id;
+            Name = name;
+            Level = level;
+            IsBaned = isBaned;
         }
 
         public void Ban()
         {
-            isBaned = true;
+            IsBaned = true;
         }
 
         public void Unban()
         {
-            isBaned = false;
+            IsBaned = false;
         }
     }
 
     class DataBasePlaeyrs
     {
-        private List<Player> players = new List<Player>();
+        private List<Player> _players = new List<Player>();
 
         public void Add()
         {
@@ -109,7 +109,7 @@ namespace ConsoleApp1
                 Console.WriteLine("Error");
             }
 
-            players.Add(new Player(id, name, level));
+            _players.Add(new Player(id, name, level));
         }
 
         private bool CheckString(out int result)
@@ -139,52 +139,86 @@ namespace ConsoleApp1
                 Console.WriteLine("Error");
             }
 
-            for (int i = 0; i < players.Count; i++)
+            for (int i = 0; i < _players.Count; i++)
             {
-                if (players[i].id == id)
+                if (_players[i].Id == id)
                 {
-                    players.RemoveAt(i);
+                    _players.RemoveAt(i);
                 }
             }
         }
 
-        private bool TryGetPlayer(out Player players)
-        {
+        //private bool TryGetPlayer(int id, int j = 0, out Player _players)
+        //{
+        //    for (int i = 0; i < _players.Count; i++)
+        //    {
+        //        if (_players[j].Id == id)
+        //        {
 
-        }
+        //            return true;
+        //        }
+        //    }
+
+        //    //if (_players[i].id == id)
+        //    //{
+        //    //    int a = players[i].id;
+        //    //    return true;
+        //    //}
+        //    //else
+        //    //{
+        //    //    i = null;
+        //    //    return false;
+        //    //}
+        //}
 
         public void Baned()
         {
             Console.WriteLine("Enter ID");
-            int id = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < players.Count; i++)
+            int id; 
+
+            if (int.TryParse(Console.ReadLine(), out id))
             {
-                if (players[i].id == id)
+                for (int i = 0; i < _players.Count; i++)
                 {
-                    players[i].Ban();
+                    if (_players[i].Id == id)
+                    {
+                        _players[i].Ban();
+                    }
                 }
+            }
+            else
+            {
+                Console.WriteLine("Error");
             }
         }
 
         public void UnBaned()
         {
             Console.WriteLine("Enter ID");
-            int id = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < players.Count; i++)
+            int id;
+
+            if (int.TryParse(Console.ReadLine(), out id))
             {
-                if (players[i].id == id)
+                for (int i = 0; i < _players.Count; i++)
                 {
-                    players[i].Unban();
+                    if (_players[i].Id == id)
+                    {
+                        _players[i].Unban();
+                    }
                 }
+            }
+            else
+            {
+                Console.WriteLine("Error");
             }
         }
 
         public void ShowInfo()
         {
-            for (int i = 0; i < players.Count; i++)
+            for (int i = 0; i < _players.Count; i++)
             {
-                Console.WriteLine($"ID {players[i].id}\nName {players[i].name}\nLevel {players[i].level}\n" +
-                    $"Ban status {players[i].isBaned}\n ");
+                Console.WriteLine($"ID {_players[i].Id}\nName {_players[i].Name}\nLevel {_players[i].Level}\n" +
+                    $"Ban status {_players[i].IsBaned}\n ");
             }
         }
     }

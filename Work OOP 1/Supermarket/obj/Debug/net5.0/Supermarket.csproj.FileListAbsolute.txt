@@ -1,0 +1,16 @@
+D:\Home-Work-OOP\Work OOP 1\Supermarket\bin\Debug\net5.0\Supermarket.exe
+D:\Home-Work-OOP\Work OOP 1\Supermarket\bin\Debug\net5.0\Supermarket.deps.json
+D:\Home-Work-OOP\Work OOP 1\Supermarket\bin\Debug\net5.0\Supermarket.runtimeconfig.json
+D:\Home-Work-OOP\Work OOP 1\Supermarket\bin\Debug\net5.0\Supermarket.runtimeconfig.dev.json
+D:\Home-Work-OOP\Work OOP 1\Supermarket\bin\Debug\net5.0\Supermarket.dll
+D:\Home-Work-OOP\Work OOP 1\Supermarket\bin\Debug\net5.0\ref\Supermarket.dll
+D:\Home-Work-OOP\Work OOP 1\Supermarket\bin\Debug\net5.0\Supermarket.pdb
+D:\Home-Work-OOP\Work OOP 1\Supermarket\obj\Debug\net5.0\Supermarket.GeneratedMSBuildEditorConfig.editorconfig
+D:\Home-Work-OOP\Work OOP 1\Supermarket\obj\Debug\net5.0\Supermarket.AssemblyInfoInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Supermarket\obj\Debug\net5.0\Supermarket.AssemblyInfo.cs
+D:\Home-Work-OOP\Work OOP 1\Supermarket\obj\Debug\net5.0\Supermarket.csproj.CoreCompileInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Supermarket\obj\Debug\net5.0\Supermarket.dll
+D:\Home-Work-OOP\Work OOP 1\Supermarket\obj\Debug\net5.0\ref\Supermarket.dll
+D:\Home-Work-OOP\Work OOP 1\Supermarket\obj\Debug\net5.0\Supermarket.pdb
+D:\Home-Work-OOP\Work OOP 1\Supermarket\obj\Debug\net5.0\Supermarket.genruntimeconfig.cache
+D:\Home-Work-OOP\Work OOP 1\Supermarket\obj\Debug\net5.0\Supermarket.csproj.AssemblyReference.cache
