@@ -50,23 +50,25 @@ namespace Supermarket
 
         public bool GetVisiterChek(Visiter visiter)
         {
-            if (CulculateTotal(visiter) < visiter.Money)
+            int solvency = CulculateTotal(visiter);
+
+            if (solvency < visiter.Money)
             {
-                visiter.WithdrawalMoney(CulculateTotal(visiter));
-                Console.WriteLine($"OK. Total price {CulculateTotal(visiter)}");
+                visiter.WithdrawalMoney(solvency);
+                Console.WriteLine($"OK. Total price {solvency}");
                 Console.WriteLine($"Money visiter {visiter.Money}");
                 return true;
             }
             else if (CheckMinimumPriceItem(visiter))
             {
-                while (CulculateTotal(visiter) > visiter.Money)
+                while (solvency > visiter.Money)
                 {
-                    visiter.GetItem();
+                    visiter.IsOutItem();
                 }
 
                 Console.WriteLine("After withdrow items");
-                visiter.WithdrawalMoney(CulculateTotal(visiter));
-                Console.WriteLine($"OK. Total price {CulculateTotal(visiter)}");
+                visiter.WithdrawalMoney(solvency);
+                Console.WriteLine($"OK. Total price {solvency}");
                 Console.WriteLine($"Money visiter {visiter.Money}");
                 return true;
             }
@@ -75,6 +77,11 @@ namespace Supermarket
                 Console.WriteLine("No Money");
                 return false;
             }
+        }
+
+        public void DequeueToQueue()
+        {
+            _visiters.Dequeue();
         }
 
         private bool CheckMinimumPriceItem(Visiter visiter)
@@ -101,11 +108,6 @@ namespace Supermarket
             }
             return total;
         }
-
-        public void DequeueToQueue()
-        {
-            _visiters.Dequeue();
-        }
     }
 
     class Stroge
@@ -114,11 +116,11 @@ namespace Supermarket
         new Item("radish", 15), new Item("carrots", 5), new Item("apricot", 20), 
         new Item("watermelon", 50)};
 
-        private Random random = new Random();
+        private Random _random = new Random();
 
         public void GetItems(ref List<Item> items)
         {
-            items.Add(new Item(_storege[random.Next(0, _storege.Count)].Name, _storege[random.Next(0, _storege.Count)].Price));
+            items.Add(new Item(_storege[_random.Next(0, _storege.Count)].Name, _storege[_random.Next(0, _storege.Count)].Price));
         }
     }
 
@@ -128,7 +130,7 @@ namespace Supermarket
 
         private List<Item> _items = new List<Item>();
 
-        private Random random = new Random();
+        private Random _random = new Random();
 
         public Visiter(int money)
         {
@@ -149,17 +151,17 @@ namespace Supermarket
         {
             int basketSize = 5;
 
-            for (int i = 0; i < random.Next(1, basketSize); i++)
+            for (int i = 0; i < _random.Next(1, basketSize); i++)
             {
                 stroge.GetItems(ref _items);
             }
         }
 
-        public bool GetItem()
+        public bool IsOutItem()
         {
             if (_items.Count > 0)
             {
-                _items.RemoveAt(random.Next(0, _items.Count));
+                _items.RemoveAt(_random.Next(0, _items.Count));
                 return true;
             }
                 else 
