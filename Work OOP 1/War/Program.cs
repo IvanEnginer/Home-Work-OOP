@@ -16,25 +16,7 @@ namespace War
 
             while (isWork)
             {
-                battle.HitsToSwqde(squad, squad1);
-                battle.ShowSqades(squad1);
-                battle.HitsToSwqde(squad1, squad);
-                battle.ShowSqades(squad);
-
-                if (battle.IsSqadeExist(squad))
-                {
-                    Console.WriteLine("Squad: " + squad1.Name + " WIN");
-                    isWork = false;
-                } 
-                else if (battle.IsSqadeExist(squad1))
-                {
-                    Console.WriteLine("Squad: " + squad.Name + " WIN");
-                    isWork = false;
-                }
-                else
-                {
-                    isWork = true;
-                }
+                isWork = battle.IsBattleRun(squad, squad1);
             }
         }
     }
@@ -57,7 +39,7 @@ namespace War
             Health -= damageFigther;
         }
 
-        public void ShowNamAndHealth(int id)
+        public void ShowInfo(int id)
         {
             Console.WriteLine("Name: " + id + ". Health: " + Health + ".");
         }
@@ -65,8 +47,6 @@ namespace War
 
     class Squad
     {
-        public string Name { get; private set; }
-
         private List<Figther> _fighters = new List<Figther>();
 
         private int _size = 5;
@@ -75,6 +55,8 @@ namespace War
         private int _minimumDamage = 10;
         private int _maximumDamage = 50;
         private Random _random = new Random();
+
+        public string Name { get; private set; }
 
         public Squad(string name)
         {
@@ -154,7 +136,6 @@ namespace War
     class Battle
     {
         private Random _random = new Random();
-
         public Battle() { }
 
         public void ShowSqades(Squad squad)
@@ -189,6 +170,32 @@ namespace War
                         squadAbsorber.IsOutFigheter(target);
                     }
                 }
+            }
+        }
+
+        public bool IsBattleRun(Squad squad, Squad squad1)
+        {
+            while (!IsSqadeExist(squad) && !IsSqadeExist(squad1))
+            {
+                HitsToSwqde(squad, squad1);
+                ShowSqades(squad1);
+                HitsToSwqde(squad1, squad);
+                ShowSqades(squad);
+            }           
+
+            if (IsSqadeExist(squad))
+            {
+                Console.WriteLine("Squad: " + squad1.Name + " WIN");
+                return false;
+            }
+            else if (IsSqadeExist(squad1))
+            {
+                Console.WriteLine("Squad: " + squad.Name + " WIN");
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
     }
