@@ -1,0 +1,16 @@
+D:\Home-Work-OOP\Work OOP 1\War\bin\Debug\net5.0\War.exe
+D:\Home-Work-OOP\Work OOP 1\War\bin\Debug\net5.0\War.deps.json
+D:\Home-Work-OOP\Work OOP 1\War\bin\Debug\net5.0\War.runtimeconfig.json
+D:\Home-Work-OOP\Work OOP 1\War\bin\Debug\net5.0\War.runtimeconfig.dev.json
+D:\Home-Work-OOP\Work OOP 1\War\bin\Debug\net5.0\War.dll
+D:\Home-Work-OOP\Work OOP 1\War\bin\Debug\net5.0\ref\War.dll
+D:\Home-Work-OOP\Work OOP 1\War\bin\Debug\net5.0\War.pdb
+D:\Home-Work-OOP\Work OOP 1\War\obj\Debug\net5.0\War.GeneratedMSBuildEditorConfig.editorconfig
+D:\Home-Work-OOP\Work OOP 1\War\obj\Debug\net5.0\War.AssemblyInfoInputs.cache
+D:\Home-Work-OOP\Work OOP 1\War\obj\Debug\net5.0\War.AssemblyInfo.cs
+D:\Home-Work-OOP\Work OOP 1\War\obj\Debug\net5.0\War.csproj.CoreCompileInputs.cache
+D:\Home-Work-OOP\Work OOP 1\War\obj\Debug\net5.0\War.dll
+D:\Home-Work-OOP\Work OOP 1\War\obj\Debug\net5.0\ref\War.dll
+D:\Home-Work-OOP\Work OOP 1\War\obj\Debug\net5.0\War.pdb
+D:\Home-Work-OOP\Work OOP 1\War\obj\Debug\net5.0\War.genruntimeconfig.cache
+D:\Home-Work-OOP\Work OOP 1\War\obj\Debug\net5.0\War.csproj.AssemblyReference.cache
