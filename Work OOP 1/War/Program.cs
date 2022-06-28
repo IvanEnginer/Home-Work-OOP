@@ -7,8 +7,8 @@ namespace War
     {
         static void Main(string[] args)
         {
-            Sqwad sqwad = new Sqwad("A");
-            Sqwad sqwad1 = new Sqwad("B");
+            Squad squad = new Squad("A");
+            Squad squad1 = new Squad("B");
 
             Battle battle = new Battle();
 
@@ -16,19 +16,19 @@ namespace War
 
             while (isWork)
             {
-                battle.HitsToSwqde(sqwad, sqwad1);
-                battle.ShowSqades(sqwad1);
-                battle.HitsToSwqde(sqwad1, sqwad);
-                battle.ShowSqades(sqwad);
+                battle.HitsToSwqde(squad, squad1);
+                battle.ShowSqades(squad1);
+                battle.HitsToSwqde(squad1, squad);
+                battle.ShowSqades(squad);
 
-                if (battle.SqadeIsExist(sqwad))
+                if (battle.IsSqadeExist(squad))
                 {
-                    Console.WriteLine("Sqwade: " + sqwad1.Name + " WIN");
+                    Console.WriteLine("Squad: " + squad1.Name + " WIN");
                     isWork = false;
                 } 
-                else if (battle.SqadeIsExist(sqwad1))
+                else if (battle.IsSqadeExist(squad1))
                 {
-                    Console.WriteLine("Sqwade: " + sqwad.Name + " WIN");
+                    Console.WriteLine("Squad: " + squad.Name + " WIN");
                     isWork = false;
                 }
                 else
@@ -41,13 +41,13 @@ namespace War
 
     class Figther
     { 
-        public int Number { get; private set; }
+        public int Id { get; private set; }
         public int Health { get; private set; }
         public int Damage { get; private set; }
 
         public Figther(int number, int health, int damage)
         {
-            Number = number;
+            Id = number;
             Health = health;
             Damage = damage;
         }
@@ -57,17 +57,17 @@ namespace War
             Health -= damageFigther;
         }
 
-        public void ShowHealth(int name)
+        public void ShowNamAndHealth(int id)
         {
-            Console.WriteLine("Name: " + name + ". Health: " + Health + ".");
+            Console.WriteLine("Name: " + id + ". Health: " + Health + ".");
         }
     }
 
-    class Sqwad
+    class Squad
     {
-        private List<Figther> _fighters = new List<Figther>();
-
         public string Name { get; private set; }
+
+        private List<Figther> _fighters = new List<Figther>();
 
         private int _size = 5;
         private int _minimumHealth = 30;
@@ -76,32 +76,32 @@ namespace War
         private int _maximumDamage = 50;
         private Random _random = new Random();
 
-        public Sqwad(string name)
+        public Squad(string name)
         {
             Name = name;
 
             Creat();
         }
 
-        public void DamageToFighter(int i, int damage)
+        public void DamageToFighter(int position, int damage)
         {
-            _fighters[i].TakeDamage(damage);
+            _fighters[position].TakeDamage(damage);
         }
 
         public void ShowFigters()
         {
             for (int i = 0; i < _fighters.Count; i++)
             {
-                Console.WriteLine($"Name: {_fighters[i].Number}. Health: {_fighters[i].Health}." +
+                Console.WriteLine($"ID: {_fighters[i].Id}. Health: {_fighters[i].Health}." +
                     $" Damage: {_fighters[i].Damage}");
             }
         }
 
-        public int RevealDamageFighterSqade(int number, Sqwad sqwade)
+        public int RevealDamageFighterSqade(int number, Squad squad)
         {
-            if (sqwade.GetCurrentSize() > 0)
+            if (squad.GetCurrentSize() > 0)
             {
-                return sqwade._fighters[number].Damage;
+                return squad._fighters[number].Damage;
             }
             else
             {
@@ -157,36 +157,36 @@ namespace War
 
         public Battle() { }
 
-        public void ShowSqades(Sqwad sqwad)
+        public void ShowSqades(Squad squad)
         {
-            Console.WriteLine("Sqade: " + sqwad.Name);
-            sqwad.ShowFigters();
+            Console.WriteLine("Sqade: " + squad.Name);
+            squad.ShowFigters();
             Console.WriteLine();
         }
 
-        public bool SqadeIsExist(Sqwad sqwad)
+        public bool IsSqadeExist(Squad squad)
         {
-            if (sqwad.GetCurrentSize() <= 0)
+            if (squad.GetCurrentSize() <= 0)
                 return true;
             else
                 return false;
         }
 
-        public void HitsToSwqde(Sqwad sqwadAgressor, Sqwad sqwadAbsorber)
+        public void HitsToSwqde(Squad squadAgressor, Squad squadAbsorber)
         {
             int target;
 
-            for (int i = 0; sqwadAgressor.GetCurrentSize() > i; i++)
+            for (int i = 0; squadAgressor.GetCurrentSize() > i; i++)
             {            
-                target = _random.Next(0, sqwadAbsorber.GetCurrentSize());
+                target = _random.Next(0, squadAbsorber.GetCurrentSize());
 
-                if (sqwadAbsorber.GetCurrentSize() > 0)
+                if (squadAbsorber.GetCurrentSize() > 0)
                 {
-                    sqwadAbsorber.DamageToFighter(target, sqwadAgressor.RevealDamageFighterSqade(i, sqwadAgressor));
+                    squadAbsorber.DamageToFighter(target, squadAgressor.RevealDamageFighterSqade(i, squadAgressor));
 
-                    if (sqwadAbsorber.TakeHelath(target) <= 0)
+                    if (squadAbsorber.TakeHelath(target) <= 0)
                     {
-                        sqwadAbsorber.IsOutFigheter(target);
+                        squadAbsorber.IsOutFigheter(target);
                     }
                 }
             }
