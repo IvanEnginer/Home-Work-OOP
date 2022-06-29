@@ -1,0 +1,16 @@
+D:\Home-Work-OOP\Work OOP 1\Aquarium\bin\Debug\net5.0\Aquarium.exe
+D:\Home-Work-OOP\Work OOP 1\Aquarium\bin\Debug\net5.0\Aquarium.deps.json
+D:\Home-Work-OOP\Work OOP 1\Aquarium\bin\Debug\net5.0\Aquarium.runtimeconfig.json
+D:\Home-Work-OOP\Work OOP 1\Aquarium\bin\Debug\net5.0\Aquarium.runtimeconfig.dev.json
+D:\Home-Work-OOP\Work OOP 1\Aquarium\bin\Debug\net5.0\Aquarium.dll
+D:\Home-Work-OOP\Work OOP 1\Aquarium\bin\Debug\net5.0\ref\Aquarium.dll
+D:\Home-Work-OOP\Work OOP 1\Aquarium\bin\Debug\net5.0\Aquarium.pdb
+D:\Home-Work-OOP\Work OOP 1\Aquarium\obj\Debug\net5.0\Aquarium.csproj.AssemblyReference.cache
+D:\Home-Work-OOP\Work OOP 1\Aquarium\obj\Debug\net5.0\Aquarium.GeneratedMSBuildEditorConfig.editorconfig
+D:\Home-Work-OOP\Work OOP 1\Aquarium\obj\Debug\net5.0\Aquarium.AssemblyInfoInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Aquarium\obj\Debug\net5.0\Aquarium.AssemblyInfo.cs
+D:\Home-Work-OOP\Work OOP 1\Aquarium\obj\Debug\net5.0\Aquarium.csproj.CoreCompileInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Aquarium\obj\Debug\net5.0\Aquarium.dll
+D:\Home-Work-OOP\Work OOP 1\Aquarium\obj\Debug\net5.0\ref\Aquarium.dll
+D:\Home-Work-OOP\Work OOP 1\Aquarium\obj\Debug\net5.0\Aquarium.pdb
+D:\Home-Work-OOP\Work OOP 1\Aquarium\obj\Debug\net5.0\Aquarium.genruntimeconfig.cache
