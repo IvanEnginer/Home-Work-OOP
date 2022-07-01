@@ -16,7 +16,7 @@ namespace Zoo
             {
                 Console.WriteLine("Chose number aviary");
                 zoo1.ShowAllAviarys();
-                Console.WriteLine("6. Esc");
+                Console.WriteLine((zoo1.GetSizeZoo() + 1) + ". Esc");
                 Console.Write("\nEnter command: ");
 
                 if (int.TryParse(Console.ReadLine(), out command))
@@ -132,9 +132,9 @@ namespace Zoo
 
     abstract class Animal
     {
-        public string Name { get; set; }
-        public Gender Gender { get; set; }
-        public string Sound { get; set; }
+        public string Name { get; private set; }
+        public Gender Gender { get; private set; }
+        public string Sound { get; private set; }
 
         public Animal(string name, Gender gender)
         {
@@ -148,13 +148,18 @@ namespace Zoo
             Console.Write($"Name: {Name}. Gender: {Gender}. Soud: {Sound}.");
             Console.WriteLine();
         }
+
+        protected void SetSound(string sound)
+        {
+            Sound = sound;
+        }
     }
 
     class Cow : Animal
     {
         public Cow(string name, Gender gender) : base(name, gender)
         {
-            Sound = "Mooo";
+            SetSound("Mooo");
         }
     }
 
@@ -162,7 +167,7 @@ namespace Zoo
     {
         public Dog(string name, Gender gender) : base(name, gender)
         {
-            Sound = "Gav";
+            SetSound("Gav");
         }
     }
 
@@ -170,7 +175,7 @@ namespace Zoo
     {
         public Hours(string name, Gender gender) : base(name, gender)
         {
-            Sound = "Igo go";
+            SetSound("Igo go");
         }
     }
 
@@ -178,7 +183,7 @@ namespace Zoo
     {
         public Fox(string name, Gender gender) : base(name, gender)
         {
-            Sound = "Dig ding wpa wpa";
+            SetSound("Dig ding wpa wpa");
         }
     }
 
@@ -186,7 +191,7 @@ namespace Zoo
     {
         public Bird(string name, Gender gender) : base(name, gender)
         {
-            Sound = "Twee";
+            SetSound("Twee");
         }
     }
 
