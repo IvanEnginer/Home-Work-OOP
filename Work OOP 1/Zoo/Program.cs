@@ -24,19 +24,19 @@ namespace Zoo
                     switch (command)
                     {
                         case 1:
-                            ShowInfoAviary(zoo1, "Cow");
+                            ShowInfoAviary(zoo1, 0);
                             break;
                         case 2:
-                            ShowInfoAviary(zoo1, "Dog");
+                            ShowInfoAviary(zoo1, 1);
                             break;
                         case 3:
-                            ShowInfoAviary(zoo1, "Hours");
+                            ShowInfoAviary(zoo1, 2);
                             break;
                         case 4:
-                            ShowInfoAviary(zoo1, "Fox");
+                            ShowInfoAviary(zoo1, 3);
                             break;
                         case 5:
-                            ShowInfoAviary(zoo1, "Bird");
+                            ShowInfoAviary(zoo1, 4);
                             break;
                         case 6:
                             isWork = false;
@@ -49,10 +49,10 @@ namespace Zoo
             }    
         }
 
-        static void ShowInfoAviary(Zoo zoo, string type)
+        static void ShowInfoAviary(Zoo zoo, int number)
         {
             Console.WriteLine("In aviary");
-            zoo.ShowInfoAnimalse(type);
+            zoo.ShowInfoAnimalse(number);
         }
     }
 
@@ -62,11 +62,11 @@ namespace Zoo
 
         public Zoo()
         {
-            _aviarys.Add(new Aviary("Cow Wally", "Cow"));
-            _aviarys.Add(new Aviary("Dog Home", "Dog"));
-            _aviarys.Add(new Aviary("Hours river", "Hours"));
-            _aviarys.Add(new Aviary("Fox root", "Fox"));
-            _aviarys.Add(new Aviary("Bird song", "Bird"));
+            _aviarys.Add(new Aviary("Cow Wally", 0));
+            _aviarys.Add(new Aviary("Dog Home", 1));
+            _aviarys.Add(new Aviary("Hours river", 2));
+            _aviarys.Add(new Aviary("Fox root", 3));
+            _aviarys.Add(new Aviary("Bird song", 4));
         }
 
         public void ShowAllAviarys()
@@ -80,45 +80,9 @@ namespace Zoo
             }
         }
 
-        public string ShowTypeAviary(string name)
+        public void ShowInfoAnimalse(int number)
         {
-            foreach (Aviary aviary in _aviarys)
-            {
-                if (name == aviary.Name)
-                {
-                    return aviary.Type;
-                }
-                else
-                {
-                    return "error";
-                }
-            }
-            return "error";
-        }
-
-        public void ShowInfoAnimalse(string type)
-        {
-            switch (type)
-            {
-                case "Cow":
-                    _aviarys[0].ShowInfoAviary();
-                    break;
-                case "Dog":
-                    _aviarys[1].ShowInfoAviary();
-                    break;
-                case "Hours":
-                    _aviarys[2].ShowInfoAviary();
-                    break;
-                case "Fox":
-                    _aviarys[3].ShowInfoAviary();
-                    break;
-                case "Bird":
-                    _aviarys[4].ShowInfoAviary();
-                    break;
-                default:
-                    Console.WriteLine("Error");
-                    break;
-            }
+            _aviarys[number].ShowInfoAviary();
         }
     }
 
@@ -126,39 +90,39 @@ namespace Zoo
     {
         private List<Animal> _animals = new List<Animal>();
         public string Name { get; private set; }
-        public string Type { get; private set; }
+        public int Number { get; private set; }
 
-        public Aviary(string name, string type)
+        public Aviary(string name, int number)
         {
             Name = name;
-            Type = type;
-            AddAnimal(type);
+            Number = number;
+            AddAnimal(number);
         }
 
-        public void AddAnimal(string type)
+        public void AddAnimal(int number)
         {
-            if (type == "Cow")
+            if (number == 0)
             {
                 _animals.Add(new Cow("Cow one", Gender.Male));
                 _animals.Add(new Cow("Cow two", Gender.Male));
                 _animals.Add(new Cow("Cow free", Gender.Female));
             }
-            else if (type == "Dog")
+            else if (number == 1)
             {
                 _animals.Add(new Dog("Dog one", Gender.Male));
                 _animals.Add(new Dog("Dog two", Gender.Male));
             }
-            else if (type == "Hours")
+            else if (number == 2)
             {
                 _animals.Add(new Hours("Hours one", Gender.Male));
             }
-            else if (type == "Fox")
+            else if (number == 3)
             {
                 _animals.Add(new Fox("Fox one", Gender.Male));
                 _animals.Add(new Fox("Fox two", Gender.Male));
                 _animals.Add(new Fox("Fox free", Gender.Female));
             }
-            else if (type == "Bird")
+            else if (number == 4)
             {
                 _animals.Add(new Bird("Bird two", Gender.Male));
                 _animals.Add(new Bird("Bird free", Gender.Female));
