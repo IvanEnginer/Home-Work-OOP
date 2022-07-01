@@ -21,7 +21,6 @@ namespace Zoo
 
                 if (int.TryParse(Console.ReadLine(), out command))
                 {
-
                     if (command == (zoo1.GetSizeZoo() + 1))
                     {
                         isWork = false;
