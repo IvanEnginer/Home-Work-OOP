@@ -154,7 +154,7 @@ namespace ConsoleApp1
             }
         }
 
-        private bool TryGetPlayer(out int iterator)
+        private bool TryGetPlayer(out int pointer)
         {
             Console.WriteLine("Enter ID");
             int id;
@@ -165,13 +165,13 @@ namespace ConsoleApp1
                 {
                     if (_players[i].Id == id)
                     {
-                        iterator = i;
+                        pointer = i;
                         return true;
                     }                    
                 }
             }
 
-            iterator = 0;
+            pointer = 0;
             Console.WriteLine("Error");
             return false;
         }
