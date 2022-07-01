@@ -21,26 +21,14 @@ namespace Zoo
 
                 if (int.TryParse(Console.ReadLine(), out command))
                 {
-                    switch (command)
+
+                    if (command == (zoo1.GetSizeZoo() + 1))
                     {
-                        case 1:
-                            ShowInfoAviary(zoo1, 0);
-                            break;
-                        case 2:
-                            ShowInfoAviary(zoo1, 1);
-                            break;
-                        case 3:
-                            ShowInfoAviary(zoo1, 2);
-                            break;
-                        case 4:
-                            ShowInfoAviary(zoo1, 3);
-                            break;
-                        case 5:
-                            ShowInfoAviary(zoo1, 4);
-                            break;
-                        case 6:
-                            isWork = false;
-                            break;
+                        isWork = false;
+                    }
+                    else
+                    {
+                        ShowInfoAviary(zoo1, command - 1);
                     }
                 }
 
@@ -67,6 +55,11 @@ namespace Zoo
             _aviarys.Add(new Aviary("Hours river", 2));
             _aviarys.Add(new Aviary("Fox root", 3));
             _aviarys.Add(new Aviary("Bird song", 4));
+        }
+
+        public int GetSizeZoo()
+        {
+            return _aviarys.Count;
         }
 
         public void ShowAllAviarys()
