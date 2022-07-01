@@ -123,93 +123,25 @@ namespace ConsoleApp1
 
         public void Delite()
         {
-            int result;
-            int id = 0;
-            bool isStringNumber;
-
-            Console.WriteLine("Enter ID");
-            isStringNumber = CheckString(out result);
-
-            if (isStringNumber)
+            if (TryGetPlayer(out int id))
             {
-                id = result;
-            }
-            else
-            {
-                Console.WriteLine("Error");
-            }
-
-            for (int i = 0; i < _players.Count; i++)
-            {
-                if (_players[i].Id == id)
-                {
-                    _players.RemoveAt(i);
-                }
+                _players.RemoveAt(id);
             }
         }
 
-        //private bool TryGetPlayer(int id, int j = 0, out Player _players)
-        //{
-        //    for (int i = 0; i < _players.Count; i++)
-        //    {
-        //        if (_players[j].Id == id)
-        //        {
-
-        //            return true;
-        //        }
-        //    }
-
-        //    //if (_players[i].id == id)
-        //    //{
-        //    //    int a = players[i].id;
-        //    //    return true;
-        //    //}
-        //    //else
-        //    //{
-        //    //    i = null;
-        //    //    return false;
-        //    //}
-        //}
-
         public void Baned()
         {
-            Console.WriteLine("Enter ID");
-            int id; 
-
-            if (int.TryParse(Console.ReadLine(), out id))
+            if (TryGetPlayer(out int id))
             {
-                for (int i = 0; i < _players.Count; i++)
-                {
-                    if (_players[i].Id == id)
-                    {
-                        _players[i].Ban();
-                    }
-                }
-            }
-            else
-            {
-                Console.WriteLine("Error");
+                _players[id].Ban();
             }
         }
 
         public void UnBaned()
         {
-            Console.WriteLine("Enter ID");
-            int id;
-
-            if (int.TryParse(Console.ReadLine(), out id))
+            if (TryGetPlayer(out int id))
             {
-                for (int i = 0; i < _players.Count; i++)
-                {
-                    if (_players[i].Id == id)
-                    {
-                        _players[i].Unban();
-                    }
-                }
-            }
-            else
-            {
-                Console.WriteLine("Error");
+                _players[id].Unban();
             }
         }
 
@@ -220,6 +152,28 @@ namespace ConsoleApp1
                 Console.WriteLine($"ID {_players[i].Id}\nName {_players[i].Name}\nLevel {_players[i].Level}\n" +
                     $"Ban status {_players[i].IsBaned}\n ");
             }
+        }
+
+        private bool TryGetPlayer(out int iterator)
+        {
+            Console.WriteLine("Enter ID");
+            int id;
+
+            if (int.TryParse(Console.ReadLine(), out id))
+            {
+                for (int i = 0; i < _players.Count; i++)
+                {
+                    if (_players[i].Id == id)
+                    {
+                        iterator = i;
+                        return true;
+                    }                    
+                }
+            }
+
+            iterator = 0;
+            Console.WriteLine("Error");
+            return false;
         }
     }
 }
