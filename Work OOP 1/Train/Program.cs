@@ -76,7 +76,7 @@ namespace Train
             Console.WriteLine("Enter point arivale: ");
             pointArivale = Console.ReadLine();
 
-            _directions.Enqueue(new Direction(pointDeparture, pointArivale, StatusDeparture.NoDeparture));
+            _directions.Enqueue(new Direction(pointDeparture, pointArivale, StatusDeparture.noDeparture));
         }
 
         public void ShowInfo()
@@ -109,13 +109,13 @@ namespace Train
                 switch (number)
                 {
                     case 1:
-                        _train.AddWagon(ClassService.ClassA);
+                        _train.AddWagon(ClassService.classA);
                         break;
                     case 2:
-                        _train.AddWagon(ClassService.ClassB);
+                        _train.AddWagon(ClassService.classB);
                         break;
                     case 3:
-                        _train.AddWagon(ClassService.ClassC);
+                        _train.AddWagon(ClassService.classC);
                         break;
                 }
             }
@@ -153,9 +153,9 @@ namespace Train
     class Train
     {
         private List<Wagon> _wagons = new List<Wagon>();
-        private Wagon WagonA = new Wagon(25, "Class A");
-        private Wagon WagonB = new Wagon(50, "Class B");
-        private Wagon WagonC = new Wagon(75, "Class C");
+        private Wagon _wagonA = new Wagon(25, "Class A");
+        private Wagon _wagonB = new Wagon(50, "Class B");
+        private Wagon _wagonC = new Wagon(75, "Class C");
 
         public Train() { }
 
@@ -168,14 +168,14 @@ namespace Train
         { 
             switch(classService)
             {
-                case ClassService.ClassA:
-                    _wagons.Add(WagonA);
+                case ClassService.classA:
+                    _wagons.Add(_wagonA);
                     break;
-                case ClassService.ClassB:
-                    _wagons.Add(WagonB);
+                case ClassService.classB:
+                    _wagons.Add(_wagonB);
                     break;
-                case ClassService.ClassC:
-                    _wagons.Add(WagonC);
+                case ClassService.classC:
+                    _wagons.Add(_wagonC);
                     break;
             }
         }
@@ -215,14 +215,14 @@ namespace Train
 
     enum ClassService
     { 
-        ClassA,
-        ClassB,
-        ClassC
+        classA,
+        classB,
+        classC
     }
 
     enum StatusDeparture
     {
-        Departure,
-        NoDeparture
+        departure,
+        noDeparture
     }
 }
