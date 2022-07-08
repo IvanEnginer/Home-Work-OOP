@@ -234,18 +234,6 @@ namespace Car_service
 
         private Random _random = new Random();
 
-        private struct _detale
-        {
-            public Detail Detail;
-            public int Quntity;
-
-            public _detale(Detail detail, int quntity)
-            {
-                Detail = detail;
-                Quntity = quntity;
-            }
-        }
-
         public Storeg()
         {
             Fill();
@@ -291,6 +279,18 @@ namespace Car_service
             _detales.Add(new _detale(new Detail(detailName.Door, GetCoast()), GetSize()));
             _detales.Add(new _detale(new Detail(detailName.Roof, GetCoast()), GetSize()));
             _detales.Add(new _detale(new Detail(detailName.Wheel, GetCoast()), GetSize()));
+        }
+
+        private struct _detale
+        {
+            public Detail Detail;
+            public int Quntity;
+
+            public _detale(Detail detail, int quntity)
+            {
+                Detail = detail;
+                Quntity = quntity;
+            }
         }
     }
 

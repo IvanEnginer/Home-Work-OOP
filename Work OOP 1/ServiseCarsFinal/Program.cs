@@ -18,10 +18,10 @@ namespace ServiseCarsFinal
         public int Cash { get; private set; }
         public int Pay { get; private set; }
 
-        private int queueLenght = 10;
+        private int _queueLenght = 10;
 
-        private Queue<Car> cars = new Queue<Car>();
-        private Storeg storeg = new Storeg();
+        private Queue<Car> _cars = new Queue<Car>();
+        private Storeg _storeg = new Storeg();
 
         public Servise(int cash, int pay)
         {
@@ -35,22 +35,22 @@ namespace ServiseCarsFinal
         {
             int fine;
 
-            if (cars.Count > 0)
+            if (_cars.Count > 0)
             {
-                detailName nameDetail = cars.Peek().GetBreakDetail();
+                DetailName nameDetail = _cars.Peek().GetBreakDetail();
 
-                if (storeg.StoregIsFill(nameDetail))
+                if (_storeg.StoregIsFill(nameDetail))
                 {
                     InstaleDetail();
                     DequeCar();
                     Cash += Pay;
                     Console.WriteLine("Машина обслужина");
-                    Console.WriteLine("Цена детали: " + storeg.GetCoastDetail(nameDetail) + " Цена работы: " + Pay + " Баланс сервиса: " + Cash);
+                    Console.WriteLine("Цена детали: " + _storeg.GetCoastDetail(nameDetail) + " Цена работы: " + Pay + " Баланс сервиса: " + Cash);
                     return true;
                 }
                 else
                 {
-                    fine = storeg.GetCoastDetail(nameDetail);
+                    fine = _storeg.GetCoastDetail(nameDetail);
                     Cash -= fine;
                     Console.WriteLine("Не удалось ослужить, штраф fine");
                     return false;
@@ -63,21 +63,21 @@ namespace ServiseCarsFinal
 
         public void ShowInfoStorege()
         {
-            storeg.ShowInfo();
+            _storeg.ShowInfo();
         }
 
         public void InstaleDetail()
         {
-            detailName detail = cars.Peek().GetBreakDetail();
-            cars.Peek().EjectBreakDetail(detail);
-            storeg.TakeDetale(detail);
+            DetailName detail = _cars.Peek().GetBreakDetail();
+            _cars.Peek().EjectBreakDetail(detail);
+            _storeg.TakeDetale(detail);
         }
 
         public bool DequeCar()
         {
-            if (cars.Peek().GetBreakDetail() == detailName.Nothing)
+            if (_cars.Peek().GetBreakDetail() == DetailName.Nothing)
             {
-                cars.Dequeue();
+                _cars.Dequeue();
                 return true;
             }
 
@@ -86,13 +86,13 @@ namespace ServiseCarsFinal
 
         public void ShowBreakCarDetail()
         {
-            Console.WriteLine("В машине неисправна: " + cars.Peek().GetBreakDetail());
+            Console.WriteLine("В машине неисправна: " + _cars.Peek().GetBreakDetail());
         }
 
         private void AddCareToQueue()
         {
-            for (int i = 0; i < queueLenght; i++)
-                cars.Enqueue(new Car());
+            for (int i = 0; i < _queueLenght; i++)
+                _cars.Enqueue(new Car());
         }
     }
 
@@ -107,24 +107,12 @@ namespace ServiseCarsFinal
 
         private Random _random = new Random();
 
-        private struct _detale
-        {
-            public Detail Detail;
-            public int Quntity;
-
-            public _detale(Detail detail, int quntity)
-            {
-                Detail = detail;
-                Quntity = quntity;
-            }
-        }
-
         public Storeg()
         {
             Fill();
         }
 
-        public int GetCoastDetail(detailName name)
+        public int GetCoastDetail(DetailName name)
         {
             for (int i = 0; i < _detales.Count; i++)
             {
@@ -139,7 +127,7 @@ namespace ServiseCarsFinal
             return 0;
         }
 
-        public bool StoregIsFill(detailName name)
+        public bool StoregIsFill(DetailName name)
         {
             for (int i = 0; i < _detales.Count; i++)
             {
@@ -151,10 +139,11 @@ namespace ServiseCarsFinal
                     }
                 }
             }
+
             return false;
         }
 
-        public void TakeDetale(detailName name)
+        public void TakeDetale(DetailName name)
         {
             for (int i = 0; i < _detales.Count; i++)
             {
@@ -179,6 +168,18 @@ namespace ServiseCarsFinal
             }
         }
 
+        private struct _detale
+        {
+            public Detail Detail;
+            public int Quntity;
+
+            public _detale(Detail detail, int quntity)
+            {
+                Detail = detail;
+                Quntity = quntity;
+            }
+        }
+
         private int GetCoast()
         {
             return _random.Next(_minimumCoast, _maximumCoast);
@@ -191,10 +192,10 @@ namespace ServiseCarsFinal
 
         private void Fill()
         {
-            _detales.Add(new _detale(new Detail(detailName.Glass, GetCoast()), GetSize()));
-            _detales.Add(new _detale(new Detail(detailName.Door, GetCoast()), GetSize()));
-            _detales.Add(new _detale(new Detail(detailName.Roof, GetCoast()), GetSize()));
-            _detales.Add(new _detale(new Detail(detailName.Wheel, GetCoast()), GetSize()));
+            _detales.Add(new _detale(new Detail(DetailName.Glass, GetCoast()), GetSize()));
+            _detales.Add(new _detale(new Detail(DetailName.Door, GetCoast()), GetSize()));
+            _detales.Add(new _detale(new Detail(DetailName.Roof, GetCoast()), GetSize()));
+            _detales.Add(new _detale(new Detail(DetailName.Wheel, GetCoast()), GetSize()));
         }
     }
 
@@ -217,7 +218,7 @@ namespace ServiseCarsFinal
             }
         }
 
-        public void EjectBreakDetail(detailName name)
+        public void EjectBreakDetail(DetailName name)
         {
             for (int i = 0; i < _details.Count; i++)
             {
@@ -228,12 +229,12 @@ namespace ServiseCarsFinal
             }
         }
 
-        public void InstaleDetail(detailName name)
+        public void InstaleDetail(DetailName name)
         {
             _details.Add(new Detail(name));
         }
 
-        public detailName GetBreakDetail()
+        public DetailName GetBreakDetail()
         {
             for (int i = 0; i < _details.Count; i++)
             {
@@ -242,15 +243,15 @@ namespace ServiseCarsFinal
                     return _details[i].Name;
                 }
             }
-            return detailName.Nothing;
+            return DetailName.Nothing;
         }
 
         private void AddDetail()
         {
-            _details.Add(new Detail(detailName.Glass));
-            _details.Add(new Detail(detailName.Door));
-            _details.Add(new Detail(detailName.Roof));
-            _details.Add(new Detail(detailName.Wheel));
+            _details.Add(new Detail(DetailName.Glass));
+            _details.Add(new Detail(DetailName.Door));
+            _details.Add(new Detail(DetailName.Roof));
+            _details.Add(new Detail(DetailName.Wheel));
         }
 
         private void BreakDetail()
@@ -261,13 +262,13 @@ namespace ServiseCarsFinal
 
     class Detail
     {
-        public detailName Name { get; private set; }
+        public DetailName Name { get; private set; }
         public int Coast { get; private set; }
         public bool IsBreak { get; private set; }
 
-        private const int minimumCoast = 10;
+        private const int _minimumCoast = 10;
 
-        public Detail(detailName name, int coast = minimumCoast, bool status = false)
+        public Detail(DetailName name, int coast = _minimumCoast, bool status = false)
         {
             Name = name;
             Coast = coast;
@@ -280,7 +281,7 @@ namespace ServiseCarsFinal
         }
     }
 
-    enum detailName
+    enum DetailName
     {
         Glass,
         Door,
