@@ -1,0 +1,16 @@
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\bin\Debug\net5.0\ServiseCarsFinal.exe
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\bin\Debug\net5.0\ServiseCarsFinal.deps.json
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\bin\Debug\net5.0\ServiseCarsFinal.runtimeconfig.json
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\bin\Debug\net5.0\ServiseCarsFinal.runtimeconfig.dev.json
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\bin\Debug\net5.0\ServiseCarsFinal.dll
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\bin\Debug\net5.0\ref\ServiseCarsFinal.dll
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\bin\Debug\net5.0\ServiseCarsFinal.pdb
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\obj\Debug\net5.0\ServiseCarsFinal.csproj.AssemblyReference.cache
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\obj\Debug\net5.0\ServiseCarsFinal.GeneratedMSBuildEditorConfig.editorconfig
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\obj\Debug\net5.0\ServiseCarsFinal.AssemblyInfoInputs.cache
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\obj\Debug\net5.0\ServiseCarsFinal.AssemblyInfo.cs
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\obj\Debug\net5.0\ServiseCarsFinal.csproj.CoreCompileInputs.cache
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\obj\Debug\net5.0\ServiseCarsFinal.dll
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\obj\Debug\net5.0\ref\ServiseCarsFinal.dll
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\obj\Debug\net5.0\ServiseCarsFinal.pdb
+D:\Home-Work-OOP\Work OOP 1\ServiseCarsFinal\obj\Debug\net5.0\ServiseCarsFinal.genruntimeconfig.cache

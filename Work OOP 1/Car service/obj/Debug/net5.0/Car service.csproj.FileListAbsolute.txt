@@ -1,0 +1,16 @@
+D:\Home-Work-OOP\Work OOP 1\Car service\bin\Debug\net5.0\Car service.exe
+D:\Home-Work-OOP\Work OOP 1\Car service\bin\Debug\net5.0\Car service.deps.json
+D:\Home-Work-OOP\Work OOP 1\Car service\bin\Debug\net5.0\Car service.runtimeconfig.json
+D:\Home-Work-OOP\Work OOP 1\Car service\bin\Debug\net5.0\Car service.runtimeconfig.dev.json
+D:\Home-Work-OOP\Work OOP 1\Car service\bin\Debug\net5.0\Car service.dll
+D:\Home-Work-OOP\Work OOP 1\Car service\bin\Debug\net5.0\ref\Car service.dll
+D:\Home-Work-OOP\Work OOP 1\Car service\bin\Debug\net5.0\Car service.pdb
+D:\Home-Work-OOP\Work OOP 1\Car service\obj\Debug\net5.0\Car service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Home-Work-OOP\Work OOP 1\Car service\obj\Debug\net5.0\Car service.AssemblyInfoInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Car service\obj\Debug\net5.0\Car service.AssemblyInfo.cs
+D:\Home-Work-OOP\Work OOP 1\Car service\obj\Debug\net5.0\Car service.csproj.CoreCompileInputs.cache
+D:\Home-Work-OOP\Work OOP 1\Car service\obj\Debug\net5.0\Car service.dll
+D:\Home-Work-OOP\Work OOP 1\Car service\obj\Debug\net5.0\ref\Car service.dll
+D:\Home-Work-OOP\Work OOP 1\Car service\obj\Debug\net5.0\Car service.pdb
+D:\Home-Work-OOP\Work OOP 1\Car service\obj\Debug\net5.0\Car service.genruntimeconfig.cache
+D:\Home-Work-OOP\Work OOP 1\Car service\obj\Debug\net5.0\Car service.csproj.AssemblyReference.cache
