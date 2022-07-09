@@ -3,6 +3,15 @@ using System.Collections.Generic;
 
 namespace ServiseCarsFinal
 {
+    enum DetailName
+    {
+        Glass,
+        Door,
+        Roof,
+        Wheel,
+        Nothing
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -168,18 +177,6 @@ namespace ServiseCarsFinal
             }
         }
 
-        private struct _detale
-        {
-            public Detail Detail;
-            public int Quntity;
-
-            public _detale(Detail detail, int quntity)
-            {
-                Detail = detail;
-                Quntity = quntity;
-            }
-        }
-
         private int GetCoast()
         {
             return _random.Next(_minimumCoast, _maximumCoast);
@@ -196,6 +193,18 @@ namespace ServiseCarsFinal
             _detales.Add(new _detale(new Detail(DetailName.Door, GetCoast()), GetSize()));
             _detales.Add(new _detale(new Detail(DetailName.Roof, GetCoast()), GetSize()));
             _detales.Add(new _detale(new Detail(DetailName.Wheel, GetCoast()), GetSize()));
+        }
+
+        private struct _detale
+        {
+            public Detail Detail;
+            public int Quntity;
+
+            public _detale(Detail detail, int quntity)
+            {
+                Detail = detail;
+                Quntity = quntity;
+            }
         }
     }
 
@@ -279,14 +288,5 @@ namespace ServiseCarsFinal
         {
             IsBreak = true;
         }
-    }
-
-    enum DetailName
-    {
-        Glass,
-        Door,
-        Roof,
-        Wheel,
-        Nothing
     }
 }
