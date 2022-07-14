@@ -1,0 +1,15 @@
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\bin\Debug\net5.0\CarServisFinalFinal.exe
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\bin\Debug\net5.0\CarServisFinalFinal.deps.json
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\bin\Debug\net5.0\CarServisFinalFinal.runtimeconfig.json
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\bin\Debug\net5.0\CarServisFinalFinal.runtimeconfig.dev.json
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\bin\Debug\net5.0\CarServisFinalFinal.dll
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\bin\Debug\net5.0\ref\CarServisFinalFinal.dll
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\bin\Debug\net5.0\CarServisFinalFinal.pdb
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\obj\Debug\net5.0\CarServisFinalFinal.GeneratedMSBuildEditorConfig.editorconfig
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\obj\Debug\net5.0\CarServisFinalFinal.AssemblyInfoInputs.cache
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\obj\Debug\net5.0\CarServisFinalFinal.AssemblyInfo.cs
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\obj\Debug\net5.0\CarServisFinalFinal.csproj.CoreCompileInputs.cache
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\obj\Debug\net5.0\CarServisFinalFinal.dll
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\obj\Debug\net5.0\ref\CarServisFinalFinal.dll
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\obj\Debug\net5.0\CarServisFinalFinal.pdb
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\obj\Debug\net5.0\CarServisFinalFinal.genruntimeconfig.cache
