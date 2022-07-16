@@ -16,9 +16,9 @@ namespace ServiseCarsFinal
     {
         static void Main(string[] args)
         {
-            CarService carService = new CarService(100);
+            CarService servise = new CarService(100);
 
-            carService.Work();
+            servise.Work();
         }
     }
 
@@ -43,30 +43,27 @@ namespace ServiseCarsFinal
             int fine;
             bool isServiced = true;
             bool isCarInQueue = true;
-            DetailName detailName;
 
             while (isServiced && isCarInQueue)
             {
                 if (_cars.Count > 0)
                 {
-                    detailName = InspectCar();
+                    //DetailName nameDetail = _cars.Peek().GetBreakDetail();
 
-                    if (_storage.IsContains(detailName))
+
+
+                    if (_storage.IsContains())
                     {
-                        EjectBreakDetail();
-                        InstaleDetail(GetDetailOfStorage(detailName));
+                        InstaleDetail(nameDetail);
                         DequeCar();
-
                         _cash += _pay;
-
                         Console.WriteLine("Машина обслужина");
-                        Console.WriteLine("Цена детали: " + _storage.GetCoastDetail(detailName) + " Цена работы: " + _pay + " Баланс сервиса: " + _cash);
-
+                        Console.WriteLine("Цена детали: " + _storage.GetCoastDetail(nameDetail) + " Цена работы: " + _pay + " Баланс сервиса: " + _cash);
                         isServiced = true;
                     }
                     else
                     {
-                        fine = _storage.GetCoastDetail(detailName);
+                        fine = _storage.GetCoastDetail(nameDetail);
                         _cash -= fine;
                         Console.WriteLine("Не удалось ослужить, штраф fine");
                         isServiced = false;
@@ -80,29 +77,21 @@ namespace ServiseCarsFinal
             }
         }
 
-        private DetailName InspectCar()
-        {
-            DetailName detailName;
-
-            detailName = _cars.Peek().GetBreakDetail().Name;
-
-            return detailName;
-        }
-
-        private void EjectBreakDetail()
-        {
-            _cars.Peek().EjectBreakDetail(_cars.Peek().GetBreakDetail());
-        }
-
-        private Detail GetDetailOfStorage(DetailName detailName)
-        {
-            return _storage.TakeDetale(detailName);
-        }
-
         private void InstaleDetail(Detail detail)
         {
-            _cars.Peek().InstaleDetail(detail);
+            //DetailName detail = _cars.Peek().GetBreakDetail();
+            _cars.Peek().EjectBreakDetail(detail);
+            _storage.TakeDetale(detail);
+
         }
+
+        //private void InstaleDetail(Detail detail)
+        //{
+        //    //DetailName detail = _cars.Peek().GetBreakDetail();
+        //    //_cars.Peek().EjectBreakDetail(detail);
+        //    //_storage.TakeDetale(detail);
+
+        //}
 
         private bool DequeCar()
         {
@@ -113,6 +102,11 @@ namespace ServiseCarsFinal
             }
 
             return false;
+        }
+
+        private void ShowBreakCarDetail()
+        {
+            Console.WriteLine("В машине неисправна: " + _cars.Peek().GetBreakDetail());
         }
 
         private void AddCareToQueue()
@@ -138,25 +132,6 @@ namespace ServiseCarsFinal
             Fill();
         }
 
-        public Detail TakeDetale(DetailName detailName)
-        {
-            for (int i = 0; i < _detales.Count; i++)
-            {
-                if (_detales[i].Detail.Name == detailName)
-                {
-                    _detailsBox detaleSwap = new _detailsBox();
-                    detaleSwap.Quntity = _detales[i].Quntity;
-                    detaleSwap.Quntity--;
-                    detaleSwap.Detail = _detales[i].Detail;
-                    _detales[i] = detaleSwap;
-
-                    return _detales[i].Detail;
-                }
-            }
-
-            return null;
-        }
-
         public int GetCoastDetail(DetailName name)
         {
             for (int i = 0; i < _detales.Count; i++)
@@ -169,7 +144,6 @@ namespace ServiseCarsFinal
                     }
                 }
             }
-
             return 0;
         }
 
@@ -187,6 +161,21 @@ namespace ServiseCarsFinal
             }
 
             return false;
+        }
+
+        public void TakeDetale(DetailName detailName)
+        {
+            for (int i = 0; i < _detales.Count; i++)
+            {
+                if (_detales[i].Detail.Name == detailName)
+                {
+                    _detailsBox detaleSwap = new _detailsBox();
+                    detaleSwap.Quntity = _detales[i].Quntity;
+                    detaleSwap.Quntity--;
+                    detaleSwap.Detail = _detales[i].Detail;
+                    _detales[i] = detaleSwap;
+                }
+            }
         }
 
         private int GetCoast()
@@ -231,6 +220,25 @@ namespace ServiseCarsFinal
             BreakDetail();
         }
 
+        public void ShowInfo()
+        {
+            foreach (Detail detalie in _details)
+            {
+                Console.WriteLine(detalie.Name + " " + detalie.Cost + " " + detalie.IsBreak);
+            }
+        }
+
+        //public void EjectBreakDetail(DetailName name)
+        //{
+        //    for (int i = 0; i < _details.Count; i++)
+        //    {
+        //        if (_details[i].Name == name)
+        //        {
+        //            _details.RemoveAt(i);
+        //        }
+        //    }
+        //}
+
         public void EjectBreakDetail(Detail detail)
         {
             for (int i = 0; i < _details.Count; i++)
@@ -242,9 +250,9 @@ namespace ServiseCarsFinal
             }
         }
 
-        public void InstaleDetail(Detail detail)
+        public void InstaleDetail(DetailName name)
         {
-            _details.Add(detail);
+            _details.Add(new Detail(name));
         }
 
         public Detail GetBreakDetail()

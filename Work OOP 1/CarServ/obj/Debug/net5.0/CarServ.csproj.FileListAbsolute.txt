@@ -1,0 +1,16 @@
+D:\Home-Work-OOP\Work OOP 1\CarServ\bin\Debug\net5.0\CarServ.exe
+D:\Home-Work-OOP\Work OOP 1\CarServ\bin\Debug\net5.0\CarServ.deps.json
+D:\Home-Work-OOP\Work OOP 1\CarServ\bin\Debug\net5.0\CarServ.runtimeconfig.json
+D:\Home-Work-OOP\Work OOP 1\CarServ\bin\Debug\net5.0\CarServ.runtimeconfig.dev.json
+D:\Home-Work-OOP\Work OOP 1\CarServ\bin\Debug\net5.0\CarServ.dll
+D:\Home-Work-OOP\Work OOP 1\CarServ\bin\Debug\net5.0\ref\CarServ.dll
+D:\Home-Work-OOP\Work OOP 1\CarServ\bin\Debug\net5.0\CarServ.pdb
+D:\Home-Work-OOP\Work OOP 1\CarServ\obj\Debug\net5.0\CarServ.GeneratedMSBuildEditorConfig.editorconfig
+D:\Home-Work-OOP\Work OOP 1\CarServ\obj\Debug\net5.0\CarServ.AssemblyInfoInputs.cache
+D:\Home-Work-OOP\Work OOP 1\CarServ\obj\Debug\net5.0\CarServ.AssemblyInfo.cs
+D:\Home-Work-OOP\Work OOP 1\CarServ\obj\Debug\net5.0\CarServ.csproj.CoreCompileInputs.cache
+D:\Home-Work-OOP\Work OOP 1\CarServ\obj\Debug\net5.0\CarServ.dll
+D:\Home-Work-OOP\Work OOP 1\CarServ\obj\Debug\net5.0\ref\CarServ.dll
+D:\Home-Work-OOP\Work OOP 1\CarServ\obj\Debug\net5.0\CarServ.pdb
+D:\Home-Work-OOP\Work OOP 1\CarServ\obj\Debug\net5.0\CarServ.genruntimeconfig.cache
+D:\Home-Work-OOP\Work OOP 1\CarServ\obj\Debug\net5.0\CarServ.csproj.AssemblyReference.cache

@@ -13,3 +13,4 @@ D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\obj\Debug\net5.0\CarServisFinalF
 D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\obj\Debug\net5.0\ref\CarServisFinalFinal.dll
 D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\obj\Debug\net5.0\CarServisFinalFinal.pdb
 D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\obj\Debug\net5.0\CarServisFinalFinal.genruntimeconfig.cache
+D:\Home-Work-OOP\Work OOP 1\CarServisFinalFinal\obj\Debug\net5.0\CarServisFinalFinal.csproj.AssemblyReference.cache
